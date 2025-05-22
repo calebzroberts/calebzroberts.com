@@ -1,0 +1,711 @@
+@import url("https://use.typekit.net/pvu0pqf.css");
+@import url("https://use.typekit.net/pvu0pqf.css");
+@import url("https://use.typekit.net/pvu0pqf.css");
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #B9201A;
+    margin:0;
+    padding: 0;
+
+    font-family: "dunbar-text", Arial, Helvetica, sans-serif;
+
+    text-align: center;
+    
+}
+
+p {
+    margin:0;
+}
+
+/*Header styling--------------------------------------------------------------*/
+
+header nav {
+    background-color: white;
+    font-family: "bovine-mvb", Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 30px;
+}
+
+nav p a {
+    text-decoration: none;
+    color: #0a1c20;
+}
+
+.selected {
+    color: #B9201A;
+}
+
+.siteLogo{
+    max-height: 120px;
+}
+
+.notOnFull {
+    display: none;
+}
+
+.notOnMobile {
+    display: block;
+}
+
+/* Dropdown information---------------------------------------*/
+
+/* The dropdown container */
+.dropdown {
+    display: none;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+    border: none;
+    outline: none;
+    color: #B9201A;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    font-size: 20px;
+    /* Important for vertical align on mobile phones */
+    margin: 0;
+    /* Important for vertical align on mobile phones */
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 160px;
+    z-index: 1;
+    padding: 2%;    
+    background-color: #ffffff;
+    
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: #0a1c20;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*Main area styling-----------------------------------------------------------*/
+#heroImage, #contactHeroImage {
+    height: 86vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(images/Home/HeroPic16.jpg);
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color:#f0c808;
+}
+
+#heroImage {
+    justify-content: center;
+}
+
+#contactHeroImage {
+    justify-content: space-around;
+}
+
+#topTitleText, #bottomTitleText {
+    color:#a3d9ff;
+}
+
+#topTitleText {
+    font-family: "blambot-fx-pro", Arial, Helvetica, sans-serif;
+    font-size: 130px;
+    margin:0;
+}
+
+#pageTitleText, #collectiblesTitleText {
+    font-family: "bovine-mvb", Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+#pageTitleText {
+    font-size: 130px;
+}
+
+#collectiblesTitleText {
+    font-size: 100px;
+}
+
+#bottomTitleText {
+    font-family: "bovine-mvb", Arial, Helvetica, sans-serif;
+    font-size: 55px;
+    margin:0;
+}
+
+.leftAlign {
+    text-align: left;
+}
+
+#topArrow {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#topArrow img {
+    height: 50px;
+}
+
+/*sections styling-----------------------------------------------------------*/
+
+.noHeadlineBox, .redBackgroundBox {
+    margin: 3% 15% 3% 15%;
+    color:#a3d9ff;
+    font-size: 20px;
+}
+
+.blackBackgroundBox {
+    background-color:#0a1c20;
+    padding: 2% 15% 3% 15%;
+    color:#a3d9ff;
+    font-size: 20px;
+
+}
+
+.blackBackgroundBox h2, .redBackgroundBox h2 {
+    font-size: 60px;
+    font-family: "bovine-mvb", Arial, Helvetica, sans-serif;
+}
+
+.blackBackgroundBox h3, .redBackgroundBox h3 {
+    color:#f0c808;
+    font-size: 40px;
+    font-family: "blambot-fx-pro", Arial, Helvetica, sans-serif;
+    margin: 3% 0% 3% 0%;
+}
+
+.twoColumnsSection {
+    display: flex;
+    justify-content: center;
+    margin: 2%;
+}
+
+.imageSection {
+    min-width: 40%;
+    margin: 0% 2% 0% 2%;
+    background-size: cover;
+    background-position: center;
+}
+
+.redBackgroundBox h2 {
+    color:#f0c808;
+}
+
+/*buttons styling--------------------------------------------------------------*/
+.yellowButton, #submitButton {
+    display: inline-block; /* Ensures proper block behavior */
+    background-image: url(images/Buttons/yellow_button_bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    
+    color: #0a1c20;
+    font-family: "bovine-mvb", Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 22px;
+    
+    max-height: 80px;
+    margin: 1%;
+    text-decoration: none; /* Removes underline from links */
+
+    transition: transform 0.2s;
+}
+
+.yellowButton {
+    padding: 50px;
+}
+
+#submitButton {
+    padding: 35px;
+}
+
+.yellowButton:hover, #submitButton {
+    transform: scale(1.1); /* Slightly enlarges button */
+}
+
+.blueButton {
+    display: inline-block; /* Ensures proper block behavior */
+    background-image: url(images/Buttons/blue_button_bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    
+    color: #0a1c20;
+    font-family: "blambot-fx-pro", Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 35px;
+    
+    max-height: 80px;
+    padding: 30px 45px 45px 40px;
+    margin: 1.5%;
+    text-decoration: none; /* Removes underline from links */
+
+    transition: transform 0.2s;
+}
+
+.blueButton:hover {
+    transform: scale(1.1); /* Slightly enlarges button */
+}
+
+#scrollArrow {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: auto;
+    height: 50px;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    transition: opacity 0.2s;
+}
+
+/*home page product grid-------------------------------------------------------*/
+.productsGrid, .productPageGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.homepageGridItem, .productPageGridItem {
+
+    filter: none;
+    transform: scale(1);
+    transition: filter .5s, transform .5s;
+}
+
+.homepageGridItem {
+
+    padding: 2%;
+
+    max-width: 40%;
+    margin: 2%;
+    color:#0a1c20;
+    background-color: #a3d9ff;
+    
+    border-radius: 20px;
+}
+
+.productPageGridItem {
+    font-size: 16px;
+    color:#a3d9ff;
+}
+
+.homepageGridItem img, .productPageGridItem img {
+    width:100%;
+}
+
+.homepageGridItem h3 {
+    font-family: "bovine-mvb", Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    margin: 1%;
+}
+
+.homepageGridItem:hover, .productPageGridItem:hover {
+    filter: drop-shadow(0px 0px 5px #0a1c20);
+    transform: scale(1.01);
+    cursor: pointer;
+}
+  
+.image {
+    filter:brightness(100%);
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+  
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+
+    width:80%;
+    max-width: 90%;
+}
+  
+.homepageGridItem:hover .image, .productPageGridItem:hover .image {
+    filter:brightness(30%);
+}
+  
+.homepageGridItem:hover .middle, .productPageGridItem:hover .middle {
+    opacity: 1;
+}
+  
+.text {
+    color: #a3d9ff;
+    font-size: 16px;
+}
+
+.productPageGridItem {
+    width: 23%;
+    margin: .5%;
+    padding: .5%;
+}
+
+.productPageGridItem .image {
+    width:100%;
+}
+
+/*about page styling-----------------------------------------------------------*/
+#teamGrid {
+    display: flex;
+}
+
+.aboutGridItem {
+    padding: 3%;
+}
+
+.aboutGridItem img {
+    width: 100%;
+    height:auto;
+}
+
+#teamGrid h3 {
+    font-size: 3.5em;
+    font-family: "blambot-fx-pro", Arial, Helvetica, sans-serif;
+    color:#a3d9ff;
+    margin: 0;
+}
+
+#teamGrid p {
+    font-size: 1.5em;
+    font-family: "bovine-mvb", Arial, Helvetica, sans-serif;
+    color:#f0c808;
+    margin: 0;
+}
+
+h4 {
+    font-size: 40px;
+    font-family: "blambot-fx-pro", Arial, Helvetica, sans-serif;
+    margin:0;
+}
+
+.bottomCta a {
+    margin: 0;
+}
+
+.bottomCta h4 {
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+}
+
+.bottomCta div {
+    width:70rem;
+    text-align: center;
+}
+
+/*products page styling--------------------------------------------------------*/
+.productsGridItem {
+    margin: 2%;
+    max-width: 40%;
+}
+
+.productsGridItem a {
+    margin: 0;
+}
+
+.productsGridItem h4 {
+    margin-top: 2%;
+    color:#f0c808;
+    font-size: 50px;
+}
+
+/*contact page styling------------------------------------------------------------*/
+.topContactItems, .contactItems {
+    width: 100%;
+    justify-content: space-around;
+}
+
+.topContactItems {
+    display: flex;
+}
+
+.contactItems div, .topContactItems div {
+    margin: 2% 2% 5% 2%;
+    max-width: 30%;
+    text-align: center;
+}
+
+.contactItems img, .topContactItems img {
+    width: 100px;
+    margin: 0;
+}
+
+.contactItems h2, .topContactItems h2 {
+    font-family: "blambot-fx-pro", Arial, Helvetica, sans-serif;
+    font-size: 60px;
+    margin: 0;
+    color:#f0c808;
+}
+
+.contactItems h3, .topContactItems h3 {
+    font-family: "dunbar-text", Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #a3d9ff;
+    margin: 0;
+}
+
+.formItem {
+    font-family: "dunbar-text", Arial, Helvetica, sans-serif;
+}
+
+#submitButton {
+    border: 0;
+    margin: 0;
+    padding-bottom: 60px;
+    background-color: transparent;
+    transform: scale(1.2);
+    transition: transform .5s;
+}
+
+#submitButton:hover {
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
+iframe {
+    width:100%;
+    border:0;
+}
+
+textarea {
+    width: 100%;
+}
+
+/*styling for bottom cta-------------------------------------------------------*/
+.redBackgroundBox .bottomCta h4 {
+    color:#f0c808;
+}
+
+/*individual product demo page styling-----------------------------------------*/
+#individualProductTitle {
+    padding: 0% 15% 0% 15%;
+
+    font-family: "bovine-mvb", Arial, Helvetica, sans-serif;
+    color: #f0c808;
+    font-size: 80px;
+}
+
+#individualProductImage {
+    width: 50%;
+    margin: 2%;
+}
+
+#individualProductCTA h3 {
+    margin: 4% 1% 2% 1%;
+}
+
+#itemPrice {
+    font-family: "blambot-fx-pro", Arial, Helvetica, sans-serif;
+    color:#f0c808;
+    font-size: 65px;
+    margin:0% 1% 3% 1%;
+}
+
+/*footer styling---------------------------------------------------------------*/
+
+#upperFooter {
+    font-family: "bovine-mvb", Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    color:#0a1c20;
+    background-color: white;
+
+    padding: 1% 3% 1% 3%;
+    display: flex;
+    justify-content: space-between;
+    text-align: right;
+}
+
+#lowerFooter {
+    font-family: "dunbar-text", Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding: 5px;
+    background-color: #B9201A;
+    color: #f0c808;
+    text-align: center;
+}
+
+/*responsiveness----------------------------------------------------------------*/
+@media screen and (max-width:900px) {
+    .twoColumnsSection {
+        display: block;
+    }
+
+    .imageSection {
+        height:300px;
+    }
+
+    .productsGrid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .homepageGridItem, .productsGridItem  {
+        max-width: 100%;
+    }
+
+    .notOnFull {
+        display: block;
+    }
+
+    .notOnMobile {
+        display: none;
+    }
+
+    header nav {
+        display: block;
+    }
+
+    #topTitleText {
+        font-size: 6em;
+    }
+    
+    #pageTitleText{
+        font-size: 5em;
+    }
+
+    #collectiblesTitleText {
+        font-size: 4em;
+    }
+    
+    #bottomTitleText {
+        font-size: 3em;
+    }
+
+    #heroImage {
+        height: 80vh;
+    }
+
+    .homepageGridItem{
+        padding: 3%;
+    }
+
+    #teamGrid {
+        display: block;
+    }
+
+    #teamGrid h3 {
+        font-size: 2.5em;
+    }
+    
+    #teamGrid p {
+        font-size: 1em;
+    }
+
+    .imageSection {
+        margin: 5% 0% 5% 0%;
+    }
+
+    .leftAlign{
+        text-align: center;
+    }
+
+    .bottomCta div {
+        width: auto;
+    }
+
+    .contactItems, .topContactItems {
+        text-align: center;
+    }
+
+    .contactItems div, .topContactItems div {
+        max-width: 100%;
+    }
+
+    .productPageGrid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .productPageGridItem {
+        width:70%;
+        margin: 2%;
+    }
+
+    #individualProductTitle {
+        font-size: 40px;
+    }
+
+    #individualProductImage {
+        width: 70%;
+    }
+
+    #itemPrice {
+        font-size: 50px;
+    }
+
+    #scrollArrow {
+        display: none;
+    }
+}
+
+@media screen and (max-width:500px) {
+    #topTitleText {
+        font-size: 3em;
+    }
+    
+    #pageTitleText{
+        font-size: 4em;
+    }
+
+    #collectiblesTitleText {
+        font-size: 2.7em;
+    }
+    
+    #bottomTitleText {
+        font-size: 1.5em;
+    }
+
+    #upperFooter {
+        font-size: 14px;
+    }
+
+    .blueButton {
+        font-size: 30px;
+    }
+    .siteLogo{
+        max-height: 80px;
+    }
+
+    #heroImage {
+        height: 85vh;
+    }
+    
+
+    .blackBackgroundBox h2, .redBackgroundBox h2, .blackBackgroundBox h3, .redBackgroundBox h3  {
+        font-size: 30px;
+    }
+
+    .yellowButton, #submitButton {
+        padding: 25px;
+    }
+}

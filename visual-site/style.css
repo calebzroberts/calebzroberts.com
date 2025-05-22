@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    text-align: center;
+    font-family: "Archivo", Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    font-size: 18px;
+    line-height: 2em;
+}
+
+header,
+#heroImage,
+button,
+#teacherSection,
+footer {
+    color: #fffcf9;
+}
+
+header div,
+header nav {
+    display: flex;
+    justify-content: center;
+}
+
+#logoTitle {
+    padding: 2% 4% 2% 4%;
+}
+
+nav {
+    border-top: 1px solid #fffcf9;
+}
+
+nav a {
+    color: #fffcf9;
+    text-decoration: none;
+    transition: color .25s;
+}
+
+nav a:hover,
+.dropdown:hover .dropbtn,
+.dropdown-content a:hover,
+.dropdown-content a:hover {
+    color: #92dce5;
+}
+
+header nav p {
+    padding: 0px 15px 0px 15px;
+}
+
+/* Dropdown information---------------------------------------*/
+
+/* The dropdown container */
+.dropdown {
+    display: none;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+    border: none;
+    outline: none;
+    color: #fffcf9;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    height: 50px;
+    /* Important for vertical align on mobile phones */
+    margin: 0;
+    /* Important for vertical align on mobile phones */
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    float: none;
+    color: #fffcf9;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+header {
+    background-color: white;
+}
+
+footer {
+    padding: 0% 0% 2% 0%;
+}
+
+header,
+footer,
+#teacherSection,
+.dropdown-content {
+    background-color: rgb(60,60,60);
+}
+
+button:hover {
+    cursor: pointer;
+    height: 52px;
+    color: #ff7f11;
+    background-color: #fffcf9;
+    border-color: #ff7f11;
+}
+
+button {
+    font-family: "Archivo";
+    font-weight: 500;
+    vertical-align: center;
+    padding: 10px;
+    margin: 15px;
+    border: 1px solid #fffcf9;
+    height: 50px;
+    font-size: 18px;
+    transition: height .5s, color .25s, background-color .25s, border-color .25s;
+    scroll-behavior: smooth;
+
+}
+
+#heroImage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)), url(images/digital_design_image.jpg);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-size: 30px;
+    min-height: 75vh;
+
+    padding: 2%;
+}
+
+#topButtons {
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    height: 75px;
+    margin: 10px 10px 10px 10px;
+}
+
+.pinwheel {
+    transform: rotate(0deg);
+    transition: all 2s;
+}
+
+.pinwheel:hover {
+    transform: rotate(180deg);
+    cursor:pointer;
+}
+
+#teacherSection div,
+#programSection div {
+    display: flex;
+}
+
+
+#teacherSection {
+    border: 1px solid rgb(60,60,60);
+}
+
+
+
+#teacherSection h1 {
+    font-size: 36px;
+}
+
+#programSection img {
+    width: 300px;
+
+    margin: 0% 5% 5% 5%;
+}
+
+#programSection div {
+
+    justify-content: space-around;
+}
+
+#teacherSection div {
+    justify-content: center;
+    padding: 0% 15% 2% 15%;
+}
+
+#teacherSection img {
+    visibility: hidden;
+    width: 40%;
+    height: 100%;
+    margin: 3%
+}
+
+#highlights {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#imagesSection {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+}
+
+#imagesSection img {
+    width: 50%;
+}
+
+.featureHighlight {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3%;
+    font-size: 30px;
+}
+
+.icon {
+    width: 200px;
+}
+
+.line {
+    width: 100px;
+    height: 100px;
+}
+
+footer div {
+    display: flex;
+    justify-content: center;
+    font-size: 13px;
+    align-items: center;
+}
+
+/*Homepage program stuff---------------------------------------*/
+.homepageProgram {
+    display: flex;
+    justify-content: space-between;
+}
+
+.programHighlightImg {
+    width: 50vw;
+    height: auto;
+}
+
+.homepageProgramText {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.homepageProgramText img {
+    height: 15vh;
+}
+
+.blueBg {
+    background-color: #123983;
+    color: #fffcf9;
+}
+
+
+@media screen and (max-width:1100px) {
+    #teacherSection div {
+        display: block;
+    }
+
+    #teacherSection img {
+        height: auto;
+        width: 100%;
+    }
+
+    #teacherImage {
+        width: auto;
+    }
+
+
+    .icon {
+        width: 50%;
+    }
+
+}
+
+@media screen and (max-width:800px) {
+
+    header,
+    footer,
+    #topButtons {
+        display: block;
+    }
+
+    #heroImage {
+        background-position: center;
+    }
+
+
+
+    button {
+        font-size: 2vh;
+        width: auto;
+    }
+
+    button:hover {
+        height: 52px;
+    }
+
+    header nav p {
+        display: none;
+    }
+
+    .dropdown {
+        display: block;
+    }
+
+    .homepageProgram {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2%;
+    }
+
+    .homepageProgramText img {
+        display: none;
+    }
+
+    /* Reverse order for every other section */
+    .reverseOnMobile {
+        flex-direction: column-reverse;
+    }
+
+}
+
+@media screen and (max-width:700px) {
+    #logoTitle {
+        display: block;
+    }
+
+}
+
+@media screen and (max-width:500px) {
+    #highlights {
+        display: block;
+    }
+
+    #imagesSection {
+        display: block;
+    }
+
+    #imagesSection img {
+        width: 100%;
+    }
+
+    .logo {
+        height:50px;
+    }
+
+}

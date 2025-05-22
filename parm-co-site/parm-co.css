@@ -1,0 +1,1062 @@
+@import url("https://use.typekit.net/sxr3swr.css");
+
+.serifNormal {
+    font-family: "source-serif-4", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.serifItalic {
+    font-family: "source-serif-4", serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.acumin-condensed-bold {
+    font-family: "acumin-pro-condensed", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.acuminProSemibold {
+    font-family: "acumin-pro", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.acuminProUltraBlack {
+    font-family: "acumin-pro", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding:0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "source-serif-4", serif;
+    font-weight: 400;
+}
+
+
+
+
+/*header styling--------------------------------------------*/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* makes sure it stays above everything else */
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 35px;
+    font-family: "acumin-pro-condensed", sans-serif;
+    font-weight: 700;
+
+    background-color: transparent;
+
+    transition: background-color 0.3s ease;
+}
+
+header .logo {
+    height: 100px;
+}
+
+
+/* Navigation */
+nav ul li {
+    display: inline-block; 
+    position: relative;
+}
+
+nav ul {
+    margin: 5px;
+}
+
+/* Navbar links */
+nav a {
+    color: #851719;
+    text-align: center;
+    padding: 14px 30px;
+    text-decoration: none;
+    text-shadow: 0px 0px 10px white;
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative; 
+    display: inline-block; 
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+    border: none;
+    background-color: inherit;
+    color:#851719;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 35px;
+    margin: 0;
+    padding: 0px 30px;
+    text-shadow: 0px 0px 10px white;
+
+}
+
+/* Hover effects */
+nav a:hover, .dropdown:hover .dropbtn {
+    color: #009349;
+}
+
+/* Dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; /* ADDED: start *below* button */
+    left: 0;
+    background-color: #f9f9f9;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Dropdown links */
+.dropdown-content a {
+    color: #851719;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* Dropdown link hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.selected, #selectedDropItem {
+    color:#ed2024;
+}
+
+/*Tablet mode navigation */
+.burgerMenu {
+    position: fixed; /* Fixed to the screen, not the flow of the document */
+    cursor: pointer;
+    z-index: 1000;
+
+    border-radius: 0;
+
+    top: 0px;
+    right: 0px;
+
+
+    width: 5rem;
+    height:auto;
+}
+
+/* Fullscreen Menu */
+.fullscreen-menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: top 0.5s ease-in-out;
+    font-size: 100%;
+}
+  
+.fullscreen-menu.show {
+    top: 0;
+}
+  
+/* Close Button (X) */
+.close-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 2.6rem;
+    height:auto;
+}
+
+/*without this, the top arrow thingy will jump to the first section where the last letter gets cut off, so moving it down.*/
+#firstSection {
+    padding-top: 5%;
+}
+
+.nav-list li {
+    border-bottom: 2px solid black;
+    padding: 10px 0;
+    display: block;
+}
+
+.nav-list li:last-child {
+    border-bottom: none; /* No border under the last item */
+}
+
+
+
+
+
+/*General Body Styling-------------------------------------------*/
+#main {
+    width: 100%;
+}
+
+h1 {
+    margin: 20px 0px;
+
+    font-family: "source-serif-4", serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 120px;
+    color:#851719;
+
+    text-shadow: 0px 2px 4px rgba(234, 0, 0, 0.53);
+
+}
+
+h2{
+    font-family: "acumin-pro", sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    color:#009349;
+    letter-spacing:2px;
+
+    text-shadow: 0px 1px 2px rgba(121, 0, 0, 0.23);
+}
+
+h3 {
+    margin: 10px;
+    font-family: "source-serif-4", serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 80px;
+}
+
+h4 {
+    font-family: "acumin-pro-condensed", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+img {
+    border-radius: 15px;
+}
+
+iframe {
+    width: 100%;
+    height: 500px;
+    border:0;
+}
+
+.logo {
+    margin: .5% 5%;
+    transition: all .3s;
+}
+
+.twoColumns {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.limitedWidth {
+    max-width: 65%;
+    justify-self: center;
+}
+
+.leftAlign {
+    text-align: left;
+}
+
+.twoColumns img{
+    max-width: 50%;
+}
+
+.twoColumnParagraph{
+    margin: 30px;
+    max-width: 40%;
+}
+
+.twoColumns article, .textWithButton {
+    margin: 25px;
+}
+
+.responsiveImage {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    width: 100%;
+    min-height: 300px; /* Adjust this as needed for responsiveness */
+
+    margin-bottom: 5%;
+}
+
+
+
+
+/*hero image section styling--------------------------------------------*/
+#heroImage {
+    height: 100vh;
+    padding: 0% 5%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background: linear-gradient(rgba(256, 256, 256, 0.8), rgba(256, 256, 256, 0.75)), url(images/Home/home-hero-image.webp);
+    background-size: cover;
+}
+
+#topArrow {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+/*panels styling---------------------------------------------------*/
+.panelGroup {
+    display: flex;
+    justify-content: center;
+}
+
+.panelGroup img, .panelGroup .imageHolder{
+    width: 100%;
+}
+
+.darkPanel, .lightPanel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+    padding: 40px;
+    margin: 15px;
+
+    border-radius: 25px;
+    
+}
+
+.darkPanel {
+    background-color: #851719;
+    color: white;
+}
+
+.lightPanel {
+    background-color: white;
+    color: #851719;
+}
+
+.panelGroup .darkPanel h4, .panelGroup .lightPanel h4 {
+    margin: 15px;
+}
+
+.panelGroup .darkPanel h4 {
+    color: #f7e171;
+}
+
+.panelGroup .lightPanel h4 {
+    color:#009349;
+}
+
+.darkPanel .imageHolder img, .lightPanel .imageHolder img {
+    width:100%;
+    height:auto;
+
+}
+
+
+
+/*buttons styling--------------------------------------------------*/
+.breadButton {
+    display: inline-block; /* Ensures proper block behavior */
+    background-image: url(images/Buttons/button_bg_1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    
+    color: black;
+    font-family: "acumin-pro", sans-serif;
+    font-weight: 900;
+    text-align: center;
+    font-size: 33px;
+    
+    max-height: 80px;
+    min-width: 200px;
+    padding: 15px 45px 45px 40px;
+    text-decoration: none; /* Removes underline from links */
+
+    transition: transform 0.2s;
+}
+
+.breadButton:hover {
+    transform: scale(1.1); /* Slightly enlarges button */
+}
+
+.meatballButton {
+    display: inline-block; /* Ensures proper block behavior */
+    background-image: url(images/Buttons/button-bg-2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    
+    color: white;
+    font-family: "acumin-pro", sans-serif;
+    font-weight: 900;
+    text-align: center;
+    font-size: 35px;
+    
+    max-height: 80px;
+    min-width: 200px;
+    padding: 5px 45px 45px 40px;
+    text-decoration: none; /* Removes underline from links */
+
+    transition: transform 0.2s;
+}
+
+.meatballButton:hover {
+    transform: scale(1.1); /* Slightly enlarges button */
+}
+
+
+
+/*light area styling-----------------------------------------------*/
+.lightBackgroundSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1% 10%;
+
+    background-color: white;
+    color:#851719;
+
+    text-align: center;
+}
+
+.lightBackgroundSection h4 {
+    color:#009349;
+}
+
+
+
+/*dark area styling-----------------------------------------------*/
+.darkBackgroundSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1% 10%;
+    
+
+    background-color: #851719;
+    color:white;
+
+    text-align: center;
+}
+
+.darkBackgroundSection h3 {
+    color:#f7e171;
+}
+
+
+
+/*cta styling------------------------------------------------------*/
+.pageSocial {
+    margin: 20px 50px 40px 50px;
+    width:135px;
+    transition: transform .2s;
+}
+
+.pageSocial:hover {
+    transform: scale(1.1);
+}
+
+
+
+/*form styling-----------------------------------------------------*/
+input {
+    font-family: "acumin-pro", sans-serif;
+    font-weight: 400;
+}
+
+textarea {
+    height: 8em;
+}
+
+.submitButton {
+    border: 0;
+    background-color: transparent;
+    transition: transform .5s;
+}
+
+.submitButtonBread {
+    padding-bottom: 30px;
+}
+
+.submitButtonMeatball {
+    padding-bottom: 5px;
+}
+
+.submitButton:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    gap: 10px;
+}
+
+.twoColumnForm {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-row label {
+    min-width: 100px; /* Enough space for your label text */
+    font-weight: bold;
+}
+
+.form-row input, .form-row textarea {
+    flex: 1;
+    padding: 6px 10px;
+    margin: 0; /* Remove margin so it doesn't push away from edges */
+    box-sizing: border-box;
+}
+
+.lightBackgroundSection form {
+    width: 70%;
+}
+
+
+
+
+/*Home Page Specific Styling---------------------------------------*/
+
+/*Event Panel*/
+#eventPanel {
+    width: 70%;
+    
+    background-color: #851719;
+    margin: 15px;
+    padding: 25px;
+
+    border-radius: 25px;
+    color:white;
+}
+
+#eventPanel h4 {
+    color: white;
+    margin-top: 0;
+}
+
+#eventPanel div h4 {
+    color: #f7e171;
+}
+
+#eventPanel img {
+    width: 100%;
+    height: auto;
+}
+
+#eventPanel article {
+    margin-left: 20px;
+    text-align: left;
+}
+
+
+/*Reviews Section*/
+#homeReviewPanel {
+    background-color: white;
+    border-radius: 15px;
+    color:#ed2024;
+    width: 50%;
+
+    padding: 15px;
+}
+
+#homeReviewPanel #reviewerName {
+    color: black;
+}
+
+/*newsletter*/
+#newsletter {
+    width: 100%;
+    margin: 15px;
+
+    text-align: left;
+}
+
+#newsletter p{
+    display: inline;
+}
+
+#newsletter input {
+    margin: 10px;
+}
+
+
+
+
+/*events page styling----------------------------------------------------*/
+#panelGroupWithButtons .darkPanel .imageHolder {
+    width: 100%;
+
+}
+
+#panelGroupWithButtons .darkPanel .imageHolder img {
+    width: 100%;
+    height: auto;
+
+}
+
+
+
+
+/*contact page styling---------------------------------------------------*/
+#contactItems {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: 700;
+    width: 80%;
+
+}
+
+#contactItems div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+    border-radius: 15px;
+    padding: 10px 15px;
+    margin: 20px;
+
+    background-color: #851719;
+    color: white;
+    transition: all .3s;
+}
+
+#contactItems div:hover {
+    transform: scale(1.1);
+}
+
+#contactItems a {
+    text-decoration: none;
+
+}
+
+#contactItems div img {
+    margin: 20px 50px;
+    width:80px;
+}
+
+
+
+
+/*reviews page styling---------------------------------------------------*/
+.reviewPanel {
+    padding: 25px;
+    border-radius: 15px;
+    margin: 15px;
+    background-color: #851719;
+    color: white;
+
+    max-width: 80%;
+}
+
+.reviewerName {
+    color:#f7e171;
+}
+
+
+
+
+/*footer styling---------------------------------------------------*/
+footer {
+    width: 100%;
+}
+
+footer .logo {
+    height: 300px;
+}
+
+footer #primaryFooter {
+    display: flex;
+    justify-content: space-between;
+
+    background-color: #f7e171;
+
+    font-family: "source-serif-4", serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 30px;
+    color:#851719;
+
+    padding:1% 5%;
+
+}
+
+#primaryFooter p {
+    margin: 0;
+}
+
+footer #socials {
+    display: flex;
+    justify-content: center;
+}
+
+.footerSocial {
+    width: 75px;
+    transition: transform .2s;
+    margin: 10px;
+}
+
+.footerSocial:hover {
+    transform: scale(1.1);
+}
+
+#primaryFooter div {
+    padding: 0% 1%;
+}
+
+#primaryFooter ul {
+    list-style-type: none;
+    
+}
+
+hr {
+    border-color: #851719;
+}
+
+#primaryFooter ul li {
+    margin: 10%;
+}
+
+#primaryFooter ul li a, #primaryFooter a {
+    color:#851719;
+    text-decoration: none;
+
+    font-family: "acumin-pro-condensed", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    font-style: normal;
+}
+
+
+
+footer #secondaryFooter {
+    padding: 5px;
+    background-color: #851719;
+
+    font-family: "acumin-pro-condensed", sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color:white;
+
+    text-align: center;
+}
+
+
+
+/*responsiveness------------------------------------------------*/
+.onlyOnDesktop {
+    display: block;
+}
+
+.onlyOnTablet {
+    display: none;
+}
+
+.onlyonMobile {
+    display: none;
+}
+
+
+@media screen and (max-width: 1600px) {
+    #quickLinks {
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 1500px) {
+    #panelGroupWithButtons {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #panelGroupWithButtons .darkPanel {
+        width: 50%;
+        justify-self: center;
+    }
+
+    #panelGroupWithButtons .darkPanel .imageHolder {
+        width: 60%;
+
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    #contactInfo {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 1100px) {
+    .onlyOnDesktop {
+        display: none;
+    }
+    
+    .onlyOnTablet {
+        display: block;
+    }
+    
+    .onlyonMobile {
+        display: none;
+    }
+
+    .twoColumns {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .twoColumns div {
+        max-width: 60%;
+        justify-self: center;
+    }
+
+    .panelGroup {
+        display: block;
+    }
+
+    .leftAlign {
+        text-align: center;
+    }
+
+    .twoColumnForm {
+        display: block;
+    }
+    
+
+    .darkPanel, .lightPanel {
+        width: inherit;
+    }
+
+    #panelGroupWithButtons .darkPanel {
+        width: 60%;
+    }
+
+    .darkPanel .imageHolder, .lightPanel .imageHolder {
+        width:50%;
+        height:auto;
+
+    }
+
+    #eventPanel article, #newsletter {
+        text-align: center;
+    }
+
+    .limitedWidth {
+        max-width: 100%;
+    }
+
+    .twoColumns p {
+        max-width: 100%;
+    }
+
+    #contactItems {
+        display: block;
+        font-weight: 700;
+        width: auto;
+    
+    }
+
+
+
+    /*header styling----------------------*/
+    header {
+        background-color: transparent;
+        position: absolute;
+    }
+
+    header .logo {
+        height: 200px;
+        margin-top: 20px; /* optional spacing */
+    }
+
+
+    /*footer styling----------------------*/
+    footer #primaryFooter {
+        display: block;
+        text-align: center;
+    }
+
+    #primaryFooter a{
+        font-size: 60px;
+        padding-bottom: 20px;
+    }
+
+    #primaryFooter .logo {
+        width: 400px;
+        height: auto;
+        margin-top: 30px;
+
+    }
+}
+
+@media screen and (max-width: 900px) {
+    h1 {
+        font-size: 600%;
+    }
+
+    #homepageTitle {
+        font-size: 300%;
+    }
+
+    h2 {
+        font-size: 150%;
+    }
+
+    h3 {
+        font-size: 60px;
+    }
+
+    h4 {
+        font-size: 25px;
+    }
+
+
+    #eventPanel, #homeReviewPanel {
+        width: 100%;
+    }
+
+    .pageSocial {
+        
+        margin: 20px 25px 30px 25px;
+        
+        width:90px;
+    }
+
+    .darkPanel .imageHolder, .lightPanel .imageHolder {
+        width:80%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #panelGroupWithButtons .darkPanel {
+        width: 70%;
+    }
+
+    #panelGroupWithButtons .darkPanel .imageHolder {
+        width: 100%;
+
+    }
+
+    .darkPanel .imageHolder, .lightPanel .imageHolder {
+        width:100%;
+    }
+
+    .pageSocial {
+        margin: 20px 20px 30px 20px;
+        
+        width:80px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .onlyOnDesktop {
+        display: none;
+    }
+    
+    .onlyOnTablet {
+        display: block;
+    }
+    
+    .onlyonMobile {
+        display: block;
+    }
+
+    .panelGroup img {
+        height: auto;
+    }
+
+    .twoColumns div {
+        max-width: 90%;
+        justify-self: center;
+    }
+
+    .lightBackgroundSection form {
+        width: 100%;
+    }
+
+    .pageSocial {
+        margin: 20px 10px 30px 10px;
+    }
+
+
+    #primaryFooter .logo {
+        width: 80%;
+        height: auto;
+    }
+
+    #firstSection {
+        padding-top: 60px;
+    }
+
+    .meatballButton, .breadButton {
+        font-size: 30px;
+        padding-top: 30px;
+    }
+
+    .submitButtonMeatball{
+        padding-top: 5px;
+    }
+
+    .submitButtonBread {
+        padding-top: 20px;
+    }
+
+}

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="images/pinwheel_fullColorsvg.svg">
+
+  <title>Commercial Art</title>
+  <style>
+    #heroImage {
+      background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)), url(images/commercial_art_hero_image.jpg);
+      background-size: cover;
+      /*background-position: 00px -350px;*/
+      background-position: bottom center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      font-size: 30px;
+    }
+
+    #teacherImage {
+    margin: 0% 7% 0% 7%;
+    background: url(images/cbaird_tahiti003.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    font-size: 30px;
+    }
+
+    button {
+      background-color: rgb(180,85,65);
+    }
+    button:hover {
+      color: rgb(180,85,65);
+    }
+    .activeSite, a.activeSite {
+    color: #B45541;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div id="logoTitle">
+      <a href="index.html">
+        <img class="logo" src="images/logos/officialLogo_blockVersion_red.svg" alt="ctc logo">
+      </a>
+    </div>
+    <nav>
+      <p><a href="index.html" title="Home Page">Home</a></p>
+      <p><a href="introvisual.html" title="Intro to visual communications page">Intro to Visual</a></p>
+      <p><a href="digitaldesign.html" title="Digital Design Page">Digital Design</a></p>
+      <p><a href="webdesign.html" title="Web Design Page">Web Design</a></p>
+      <p><a href="photography.html" title="Photography Page">Photography</a></p>
+      <p><a class="activeSite" href="commercialart.html" title="Commercial Art Page">Commercial Art</a></p>
+      <div class="dropdown">
+        <button class="dropbtn">Menu
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="index.html" title="Home Page">Home</a>
+          <a href="introvisual.html" title="Intro to visual communications page">Intro to Visual</a>
+          <a href="digitaldesign.html" title="Digital Design Page">Digital Design</a>
+          <a href="webdesign.html" title="Web Design Page">Web Design</a>
+          <a href="photography.html" title="Photography Page">Photography</a>
+          <a class="activeSite" href="commercialart.html" title="Commercial Art Page">Commercial Art</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="heroImage">
+      <br>
+      <h1>Create Advertisements and Custom Designs!</h1>
+      <br>
+      <div id="topButtons">
+        <form action="#teacherSection" method="get">
+          <button>MORE INFO &darr;</button>
+        </form>
+
+        <form action="https://lcctc.smapply.org/" method="get">
+          <button>APPLY TODAY &rarr;</button>
+        </form>
+      </div>
+      <br>
+      <br>
+    </section>
+
+    <section id="teacherSection">
+      <h1>Meet the Teacher</h1>
+      <div>
+        <div id="teacherImage">
+          <img src="images/Comart_teacher_headshot_final.jpg" alt="teacher image">
+        </div>
+        
+        <p>
+          Mr. Baird <br>
+          Mr. Baird has been at the Brownstown CTC for 22 years and had experience 
+          in advertising for 10 years prior. In the commercial art class, you can 
+          expect to work on media like brochures, posters, advertisements, 3d packaging 
+          and more. One of the major projects to look forward to is the Maquette, which 
+          is a small 3d model prototype of a character. Mr. Baird has been married for 
+          27 years and has 2 children. Outside of his work at CTC, he enjoys reading, 
+          podcasts, outdoor activities like camping and canoeing, and visiting art museums. 
+        </p>
+      </div>
+
+    </section>
+
+    <section id="highlights">
+      <div class="featureHighlight">
+        <img class="icon" src="images/building_2.svg" alt="building icon">
+        <p>
+          <b>Real-world <br> Application</b>
+        </p>
+      </div>
+      <div class="featureHighlight">
+        <img class="icon" src="images/mouse_click.svg" alt="mouse click icon">
+        <p>
+          <b>Professional-grade <br> Software</b>
+        </p>
+      </div>
+
+      <div class="featureHighlight">
+        <img class="icon" src="images/up_trend_comart.svg" alt="upward trend icon">
+        <p>
+          <b>Creative Career <br> Readiness</b>
+        </p>
+      </div>
+    </section>
+
+    <section id="imagesSection">
+      <img src="images/comart_image_1.JPG" alt="stick to it sign">
+      <img src="images/comart_image_2.JPG" alt="marker set">
+    </section>
+
+    <!--
+        <section id="programSection">
+          <br>
+
+          <h1>About the Program</h1>
+
+          <div>
+            <img src="images/digital_design_image.jpg" alt="teacher image">
+            <p>
+              Learn how drawing, computer graphics, and photography can deliver powerful visual 
+              impact in this half-day program designed to give you a taste of our full-day visual 
+              communications programs. Capture photographs and design reproductions using the same 
+              digital tools as professional graphic artists and commercial printers.
+            </p>
+          </div>
+        </section>
+-->
+
+
+
+  </main>
+
+  <footer>
+    <br>
+    <div id="topButtons">
+      <form action="https://lancasterctc.edu/academics/high-school/visual-communications/commercial-art/"
+        target=”_blank” method="get">
+        <button>MORE INFO &rarr;</button>
+      </form>
+
+      <form action="https://lcctc.smapply.org/" method="get">
+        <button>APPLY TODAY &rarr;</button>
+      </form>
+    </div>
+    <div>
+      <img class="logo pinwheel" src="images/pinwheel_commArt.svg" alt="ctc logo" onclick="location.href='index.html';">
+      <h1>Lancaster Career & Technology Center</h1>
+    </div>
+  </footer>
+</body>
+
+</html>

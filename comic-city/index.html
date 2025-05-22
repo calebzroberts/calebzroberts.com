@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Comic City</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/x-icon" href="images/Comic-City-Logo.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <script src="https://cdn.userway.org/widget.js" data-account="BCw7PWHG0g"></script>
+    </head>
+    
+    <body>
+
+        <header>
+            <nav>
+                <p class="notOnFull"><a href="index.html" title="Home Page"><img class="siteLogo" src="images/Comic-City-Logo.png" alt="comic city logo"></a></p>
+                <p class="notOnMobile"><a class="selected" href="index.html" title="Home Page">Home</a></p>
+                <p class="notOnMobile"><a href="about-us.html" title="About Page">About</a></p>
+                <p class="notOnMobile"><a href="index.html" title="Home Page"><img class="siteLogo" src="images/Comic-City-Logo.png" alt="comic city logo"></a></p>
+                <p class="notOnMobile"><a href="products.html" title="Products Page">Products</a></p>
+                <p class="notOnMobile"><a href="contact-us.html" title="Contact Page">Contact</a></p>
+                <div class="dropdown notOnFull">
+                    <button class="dropbtn">Menu</button>
+                    <div class="dropdown-content">
+                      <a class="selected" href="index.html" title="Home Page">Home</a>
+                      <a href="about-us.html" title="About Page">About</a>
+                      <a href="products.html" title="Products Page">Products</a>
+                      <a href="contact-us.html" title="Contact Page">Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <div id="heroImage">
+                <h1 id="topTitleText">Comic City</h1>
+                <h1 id="pageTitleText">Grand Opening</h1>
+                <h1 id="bottomTitleText">April 5</h1>
+                <a id="topArrow" href="#firstSection" title="first section of page"><img src="images/Buttons/Arrow-icon.png" alt="down arrow"></a>
+            </div>
+
+            <img id="scrollArrow" onclick="scrollPage()" src="images/Buttons/Arrow-icon.png" alt="down arrow">
+
+            <div class="noHeadlineBox" id="firstSection">
+                <p>
+                    Our Grand Opening will fill a much-needed role as a hub for all of the nerdy types that call 
+                    Lancaster, PA home. As our wonderfully weird and unique customer base grows, we move into 
+                    our first location, a much more spacious building, tripling our space and our ability to 
+                    deliver geeky goodness! 
+                </p>
+
+                <a href="about-us.html" class="yellowButton" title="About Page">
+                    <p>
+                        Check It Out!
+                    </p>
+                </a>
+
+
+            </div>
+
+            <section class="blackBackgroundBox">
+                <h2>Who We Are</h2>
+
+                <div class="twoColumnsSection">
+                    <div class="imageSection" style="background-image: url(images/Home/storefront2.jpg);">
+                        <br>
+                    </div>
+    
+                    <div class="imageSidebar leftAlign">
+                        <h3>Lancaster, PA's favorite family comic book store!</h3>
+                        <p>
+                            Comic City is Lancaster’s favorite family Comic Book Store! Our staff have a passion 
+                            for the entire comic book industry that few can match, which is why we’ve dedicated 
+                            ourselves and our store to bringing you the finest comic book experience in all of 
+                            Central PA! 
+                        </p>
+        
+                        <a href="about-us.html" class="blueButton" title="About Page">
+                            <p>
+                                Learn More!
+                            </p>
+                        </a>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="redBackgroundBox">
+                <h2>What We've Got</h2>
+                <p>
+                    We have all the newest comic releases but we offer so much more than just comics. 
+                    Stop by and see all the graphic novels, collectibles, miniatures, role playing games, 
+                    collectible card games, t-shirts, board games and more. “We don’t just sell comics.”
+                </p>
+
+                <div class="productsGrid">
+                    <div class="homepageGridItem" onclick="window.location.href='products/classic-comics.html';">
+                        <img src="images/Home/comic_city_001.jpg" alt="Comic Book Display" class="image" style="width:100%">
+                        <div class="middle">
+                            <div class="text">Click to check out our vast selection of comics!</div>
+                        </div>
+
+                        <h4>Comics</h4>
+                    </div>
+
+                    <div class="homepageGridItem" onclick="window.location.href='products/graphic-novels.html';">
+                        <img src="images/Home/comic_city_003.jpg" alt="Graphic Novels on a Shelf" class="image" style="width:100%">
+                        <div class="middle">
+                            <div class="text">Click to check out our graphic novels selection!</div>
+                        </div>
+                        <h4>Graphic Novels</h4>
+                    </div>
+
+                    <div class="homepageGridItem" onclick="window.location.href='products/collectibles.html';">
+                        <img src="images/Home/comic_city_002.jpg" alt="Funko Pop Display" class="image" style="width:100%">
+                        <div class="middle">
+                            <div class="text">Click to check out The various collectibles we have!</div>
+                        </div>
+                        <h4>Collectibles</h4>
+                    </div>
+
+                    <div class="homepageGridItem" onclick="window.location.href='products/games.html';">
+                        <img src="images/Home/comic_city_004.jpg" alt="Games Display" class="image" style="width:100%">
+                        <div class="middle">
+                            <div class="text">Click to see what games we have in stock!</div>
+                        </div>
+                        <h4>Games</h4>
+                    </div>
+                </div>
+
+
+            </section>
+
+            <section class="blackBackgroundBox">
+                <h2>New Comics</h2>
+
+                <div class="twoColumnsSection">
+    
+                    <div class="imageSidebar leftAlign">
+                        <h3>New Comics arrive every week on Wednesday morning </h3>
+                        <p>
+                            We open at 9:00am and the week’s new issues are ready to be sold at that time. We 
+                            have a gigantic array of graphic novels on display with new ones and restocks 
+                            arriving weekly. Besides the regular doses of Marvel and DC superheroes, we have 
+                            recent arrivals which may arouse your interest. 
+                        </p>
+        
+                        <a href="contact-us.html" class="blueButton" title="Contact Page">
+                            <p>
+                                Reach Out!
+                            </p>
+                        </a>
+                    </div>
+
+                    <div class="imageSection" style="background-image: url(images/Products/new-comics.jpg);">
+                        <br>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="redBackgroundBox">
+                <h2>Come and Visit</h2>
+
+                <div class="twoColumnsSection">
+                    <div class="imageSection" style="background-image: url(images/Home/comic_city_005.jpg);">
+                        <br>
+                    </div>
+    
+                    <div class="imageSidebar leftAlign">
+                        <h3>We're here locally in Lancaster</h3>
+                        <p>
+                            Got any questions? Feel free to contact us to learn more about who we are, what we 
+                            sell, or where we are. Our store’s Grand Opening is April 5, so be sure to stop by 
+                            then to check us out!
+                        </p>
+        
+                        <a href="contact-us.html" class="yellowButton" title="Contact Page">
+                            <p>
+                                Contact Us!
+                            </p>
+                        </a>
+
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+
+        <footer>
+            <div id="upperFooter">
+                <img class="siteLogo" src="images/Comic-City-Logo.png" alt="comic city logo">
+                <p>
+                    2010 Commons Way <br>
+                    Downtown, PA 17500 <br>
+                    <br>
+                    (717)-123-4567 <br>
+                    <br>
+                    comics@citycomics.com
+                </p>
+            </div>
+            <div id="lowerFooter">
+                <p>&copy;2025 Comic City</p>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+
+    </body>
+
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="images/pinwheel_fullColorsvg.svg">
+  <title>The CTC Creatives</title>
+
+  <style>
+    button {
+      background-color: rgb(10,10,10);
+    }
+
+    button:hover {
+      color: rgb(10,10,10);
+    }
+
+    .activeSite, a.activeSite {
+    color: #101010;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div id="logoTitle">
+      <a href="index.html">
+      <img class="logo" src="images/logos/officialLogo_originalVersion_pinwheelColor_WHITE_TEXT.svg" alt="ctc logo">
+      </a>
+    </div>
+
+    <nav>
+      <p><a class="activeSite" href="index.html" title="Home Page">Home</a></p>
+      <p><a href="introvisual.html" title="Intro to visual communications page">Intro to Visual</a></p>
+      <p><a href="digitaldesign.html" title="Digital Design Page">Digital Design</a></p>
+      <p><a href="webdesign.html" title="Web Design Page">Web Design</a></p>
+      <p><a href="photography.html" title="Photography Page">Photography</a></p>
+      <p><a href="commercialart.html" title="Commercial Art Page">Commercial Art</a></p>
+      <div class="dropdown">
+        <button class="dropbtn">Menu
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a class="activeSite" href="index.html" title="Home Page">Home</a>
+          <a href="introvisual.html" title="Intro to visual communications page">Intro to Visual</a>
+          <a href="digitaldesign.html" title="Digital Design Page">Digital Design</a>
+          <a href="webdesign.html" title="Web Design Page">Web Design</a>
+          <a href="photography.html" title="Photography Page">Photography</a>
+          <a href="commercialart.html" title="Commercial Art Page">Commercial Art</a>
+        </div>
+      </div>
+    </nav>
+
+  </header>
+
+  <main>
+    <section id="heroImage">
+      <br>
+      <h1>Explore Our Visual Programs!</h1>
+      <br>
+      <div id="topButtons">
+        <form action="#firstHighlight" method="get">
+          <button>MORE INFO &darr;</button>
+        </form>
+
+        <form action="https://lcctc.smapply.org/" method="get">
+          <button>APPLY TODAY &rarr;</button>
+        </form>
+      </div>
+      <br>
+      <br>
+    </section>
+
+    <!--
+    <section id="highlights">
+      <div class="featureHighlight">
+        <img class="icon" src="images/brush.svg" alt="brush icon">
+        <p>
+          <b>Intro to Visual <br>Communications</b>
+        </p>
+      </div>
+      <div class="featureHighlight">
+        <img class="icon" src="images/art_palette.svg" alt="art palette icon">
+        <p>
+          <b>Digital Design</b>
+        </p>
+      </div>
+
+      <div class="featureHighlight">
+        <img class="icon" src="images/globe.svg" alt="globe icon">
+        <p>
+          <b>Web Design</b>
+        </p>
+      </div>
+
+      <div class="featureHighlight">
+        <img class="icon" src="images/camera.svg" alt="camera icon">
+        <p>
+          <b>Photography</b>
+        </p>
+      </div>
+
+      <div class="featureHighlight">
+        <img class="icon" src="images/business_building.svg" alt="building icon">
+        <p>
+          <b>Commercial Art</b>
+        </p>
+      </div>
+    </section>
+
+    -->
+
+    <!--intro to visual section-->
+    <div class="homepageProgram" id="firstHighlight">
+      <img class="programHighlightImg" src="images/intro_to_visual_hero_image.jpg" alt="intro to visual image">
+      <div class="homepageProgramText">
+        <img class="icon" src="images/brush.svg" alt="brush icon">
+        <h1>Intro to Visual</h1>
+        <form action="introvisual.html" method="get">
+          <button>LEARN MORE &rarr;</button>
+        </form>
+      </div>
+
+    </div>
+
+    <!--digital design section-->
+    <div class="homepageProgram reverseOnMobile" style="background-color: #D28C50;">
+
+      <div class="homepageProgramText">
+        <img class="icon" src="images/art_palette-white.svg" alt="palette icon">
+        <h1>Digital Design</h1>
+        <form action="digitaldesign.html" method="get">
+          <button>LEARN MORE &rarr;</button>
+        </form>
+      </div>
+      <img class="programHighlightImg" src="images/digital_design_image.jpg" alt="digital design image">
+
+    </div>
+
+    <!--web design section-->
+    <div class="homepageProgram">
+      <img class="programHighlightImg" src="images/web_design_hero_image.jpg" alt="web design image">
+      <div class="homepageProgramText">
+        <img class="icon" src="images/globe.svg" alt="globe icon">
+        <h1>Web Design</h1>
+        <form action="webdesign.html" method="get">
+          <button>LEARN MORE &rarr;</button>
+        </form>
+      </div>
+
+    </div>
+
+    <!--photography section-->
+    <div class="homepageProgram reverseOnMobile" style="background-color: #3C2896;">
+
+      <div class="homepageProgramText">
+        <img class="icon" src="images/camera-white.svg" alt="camera icon">
+        <h1>Photography</h1>
+        <form action="photography.html" method="get">
+          <button>LEARN MORE &rarr;</button>
+        </form>
+      </div>
+      <img class="programHighlightImg" src="images/photography_hero_image.jpg" alt="photography image">
+
+    </div>
+
+    <!--commercial art section-->
+    <div class="homepageProgram">
+      <img class="programHighlightImg" src="images/commercial_art_hero_image.jpg" alt="commercial art image">
+      <div class="homepageProgramText">
+        <img class="icon" src="images/business_building.svg" alt="building icon">
+        <h1>Commercial Art</h1>
+        <form action="commercialart.html" method="get">
+          <button>LEARN MORE &rarr;</button>
+        </form>
+      </div>
+
+    </div>
+
+  </main>
+
+  <footer>
+    <br>
+    <div id="topButtons">
+      <form action="https://lancasterctc.edu/academics/high-school/visual-communications/" target=”_blank” method="get">
+        <button>LEARN MORE &rarr;</button>
+      </form>
+
+      <form action="https://lcctc.smapply.org/" method="get">
+        <button>APPLY TODAY &rarr;</button>
+      </form>
+    </div>
+    <div>
+      <img class="logo pinwheel" src="images/pinwheel_fullColorsvg.svg" alt="ctc logo" onclick="location.href='index.html';">
+      <h1>Lancaster Career & Technology Center</h1>
+    </div>
+  </footer>
+
+</body>
+
+</html>

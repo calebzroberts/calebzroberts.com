@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="images/pinwheel_fullColorsvg.svg">
+
+  <title>Photography</title>
+  <style>
+    #heroImage {
+      background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)), url(images/photography_hero_image.jpg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      font-size: 30px;
+    }
+    #teacherImage {
+    margin: 3%;
+    background: url(images/headshots/farley_headshot.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    font-size: 30px;
+    }
+
+    button {
+      background-color: rgb(60,40,150);
+    }
+    button:hover {
+      color: rgb(60,40,150);
+    }
+
+    .activeSite, a.activeSite {
+    color: #3C2896;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div id="logoTitle">
+      <a href="index.html">
+        <img class="logo" src="images/logos/officialLogo_blockVersion_purple.svg" alt="ctc logo">
+      </a>  
+    </div>
+    <nav>
+      <p><a href="index.html" title="Home Page">Home</a></p>
+      <p><a href="introvisual.html" title="Intro to visual communications page">Intro to Visual</a></p>
+      <p><a href="digitaldesign.html" title="Digital Design Page">Digital Design</a></p>
+      <p><a href="webdesign.html" title="Web Design Page">Web Design</a></p>
+      <p><a class="activeSite" href="photography.html" title="Photography Page">Photography</a></p>
+      <p><a href="commercialart.html" title="Commercial Art Page">Commercial Art</a></p>
+      <div class="dropdown">
+        <button class="dropbtn">Menu
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="index.html" title="Home Page">Home</a>
+          <a href="introvisual.html" title="Intro to visual communications page">Intro to Visual</a>
+          <a href="digitaldesign.html" title="Digital Design Page">Digital Design</a>
+          <a href="webdesign.html" title="Web Design Page">Web Design</a>
+          <a class="activeSite" href="photography.html" title="Photography Page">Photography</a>
+          <a href="commercialart.html" title="Commercial Art Page">Commercial Art</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="heroImage">
+      <br>
+      <h1>Master the Art of Taking Photos!</h1>
+      <br>
+      <div id="topButtons">
+        <form action="#teacherSection" method="get">
+          <button>MORE INFO &darr;</button>
+        </form>
+
+        <form action="https://lcctc.smapply.org/" method="get">
+          <button>APPLY TODAY &rarr;</button>
+        </form>
+      </div>
+      <br>
+      <br>
+    </section>
+
+    <section id="teacherSection">
+      <h1>Meet the Teacher</h1>
+      <div>
+        <div id="teacherImage">
+          <img src="images/Photography_teacher_final.jpg" alt="teacher image">
+
+        </div>
+        <p>
+          Mrs. Farley <br>
+          Mrs. Farley brings years of industry experience and an entire year at CTC to the table as the photography
+          program teacher. Some projects to expect out
+          of the program include Flash Photography and Portraits, both of which have a practical aspect when it comes to
+          employment. Before coming to CTC, she
+          was enrolled in an art program, and outside of her work at the Brownstown CTC, she loves animals and
+          gardening.
+        </p>
+      </div>
+
+    </section>
+
+    <section id="highlights">
+      <div class="featureHighlight">
+        <img class="icon" src="images/camera.svg" alt="camera icon">
+        <p>
+          <b>Take Professional <br>Photos</b>
+        </p>
+      </div>
+      <div class="featureHighlight">
+        <img class="icon" src="images/edit_tool.svg" alt="edit tool icon">
+        <p>
+          <b>Master Adobe <br>Photoshop</b>
+        </p>
+      </div>
+
+      <div class="featureHighlight">
+        <img class="icon" src="images/auto_fix.svg" alt="de-blur icon">
+        <p>
+          <b>Enhance Photos <br>Creatively</b>
+        </p>
+      </div>
+    </section>
+
+    <section id="imagesSection">
+      <img src="images/photography_image_1.jpg" alt="student working on laptop">
+      <img src="images/photography_image_2.jpg" alt="wall of photos">
+    </section>
+
+    <!--
+        <section id="programSection">
+          <br>
+
+          <h1>About the Program</h1>
+
+          <div>
+            <img src="images/digital_design_image.jpg" alt="teacher image">
+            <p>
+              Learn how drawing, computer graphics, and photography can deliver powerful visual 
+              impact in this half-day program designed to give you a taste of our full-day visual 
+              communications programs. Capture photographs and design reproductions using the same 
+              digital tools as professional graphic artists and commercial printers.
+            </p>
+          </div>
+        </section>
+-->
+
+
+
+  </main>
+
+  <footer>
+    <br>
+    <div id="topButtons">
+      <form
+        action="https://lancasterctc.edu/academics/high-school/visual-communications/photography-and-multimedia-communications/"
+        target=”_blank” method="get">
+        <button>MORE INFO &rarr;</button>
+      </form>
+
+      <form action="https://lcctc.smapply.org/" method="get">
+        <button>APPLY TODAY &rarr;</button>
+      </form>
+    </div>
+    <div>
+      <img class="logo pinwheel" src="images/pinwheel_digitalPhotography.svg" alt="ctc logo" onclick="location.href='index.html';">
+      <h1>Lancaster Career & Technology Center</h1>
+    </div>
+  </footer>
+</body>
+
+</html>

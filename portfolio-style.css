@@ -1,0 +1,1288 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&family=Numans&family=Oswald:wght@200..700&family=Roboto&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  color: darkgray;
+  font: 400 20px "Numans", Arial, sans-serif;
+  
+  z-index: 1;
+}
+
+/*Header and text styling-------------------------------------------------------------*/
+h1, h2, h4, h5, h6 {
+    margin: 10px;
+}
+
+h1 {
+    font-family: "Exo 2", sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 85px;
+}
+
+h2 {
+    font-weight: 300;
+    color: #56A3A6;
+    font-size: 30px;
+}
+
+h3 {
+    font-family: "Exo 2", Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-size: 50px;
+    margin: 25px;
+}
+
+h4 {
+    font-family: "Exo 2", Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-size: 40px;
+}
+
+h6 {
+    font-style: italic;
+}
+
+a:link {
+    color:#C32032;
+    text-decoration: none;
+}
+
+a:hover {   
+    color:#da3c4e;
+}
+
+a:active {
+    color:#56A3A6;
+}
+
+#main p {
+    line-height: 2rem;
+}
+
+
+/*General Styling---------------------------------------------------------------------*/
+.left {
+    text-align: left;
+
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+/*Header styling----------------------------------------------------------------------*/
+
+.angled-header {
+    width: 100%;
+    background-image: url(images/header-bg.svg);
+    background-size: 100% 100%;
+    padding-bottom: 10px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  margin: 5px 0 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  display: inline-block;
+  position: relative;
+}
+
+nav a, .dropbtn {
+  color: #C32032;
+  text-decoration: none;
+  text-align: center;
+  text-shadow: 0 0 10px white;
+  padding: 14px 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  font-family: "Numans", Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+.navText {
+    margin-top: .5rem;
+}
+
+.dropbtn {
+  padding: 0 30px;
+}
+
+nav a:hover, .dropdown:hover .dropbtn {
+  color: #da3c4e;
+}
+
+.logo img {
+  height: 100px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; /* ADDED: start *below* button */
+    left: 0;
+    background-color: #f9f9f9;
+    min-width: 240px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+} 
+
+.dropdown-content a {
+  display: block;
+  padding: 12px 16px;
+  text-align: left;
+  color: #C32032;
+}
+
+.dropdown-content a:hover {
+  background: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.selected, #selectedDropItem {
+  color: #C32032;
+}
+
+#topLogo {
+    display: none;
+}
+
+/* Mobile header */
+.mobile-header {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  z-index: 999;
+}
+
+.mobile-logo img {
+    height: 3rem;
+    margin: 0;
+    
+}
+
+#menu-toggle {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobile menu overlay */
+.mobile-menu {
+    display: flex; /* changed from none so it's always layout-ready */
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.95);
+    color: white;
+    z-index: 998;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+
+    transform: translateY(-50px);
+    transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
+}
+  
+/* When menu is active, fade in */
+.mobile-menu.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.mobile-menu li {
+  margin: 5px 0;
+  padding: 20px 0;
+}
+
+.mobile-menu li:not(:last-child) {
+    border-bottom: 2px solid rgba(255,255,255, 0.3);
+}
+
+.mobile-menu a {
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+#close-menu {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+/*Hero image styling----------------------------------------------------------------*/
+.hero-section {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+  
+.hero-left {
+    flex: .8;
+    background: black;
+    color: white;
+    padding: 3rem 1rem 3rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-right {
+    flex: 1;
+    
+}
+
+#homeMobileHero, #contactMobileHero {
+    background-image: none;
+}
+
+/*Primary sections styling-----------------------------------------------------------*/
+.angled-section {
+    margin-top: -19vh;
+
+    padding: 25vh 2rem 35vh 2rem;
+    position: relative;
+    /* top slant: 5% down; bottom slant: 5% up */
+}
+
+.angle-normal {
+    clip-path: polygon(0 0, 100% 10rem, 100% 100%, 0% 100%);
+}
+
+.angle-reverse {
+    clip-path: polygon(0 10rem, 100% 0, 100% 100%, 0% 100%);
+}
+
+.angle-normal-bottom {
+    clip-path: polygon(0 0, 100% 10rem, 100% 100%, 0% 100%);
+}
+
+.angle-reverse-bottom {
+    clip-path: polygon(0 10rem, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.red-section {
+    background-color: #C32032;
+    color: white;
+}
+
+.red-section h3 {
+    color:#00BFA5;
+}
+
+.white-section {
+
+    background-color: white;
+    color: black;
+}
+
+.white-section h3 {
+    color:#C32032;
+}
+
+.gray-section {
+    background-color: #56A3A6;
+    color: white;
+}
+
+.gray-section h3 {
+    color:white;
+}
+
+/*Home Specific Styling-------------------------------------------------------*/
+
+/*skills part*/
+.skillsSection {
+    display: flex;
+    justify-content: center;
+}
+
+.skillTile {
+    margin: 1%;
+    padding: 5% 2% 2% 2%;
+    width: 15%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    border-radius: 25px;
+    background-color: #C32032;
+    color: white;
+
+}
+
+.skillsSectionRow {
+    display: none;
+}
+
+.skillTile img {
+    width: 50%;
+}
+
+/*projects part*/
+.projects-container {
+    width: 100%;
+    margin: 5% auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.project-tile {
+    position: relative;
+    color: white;
+    text-decoration: none;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 250px;
+    transition: transform 0.3s ease;
+
+    border-radius: 25px;
+
+}
+
+.project-tile:hover {
+    transform: scale(1.02);
+    color:white;
+}
+
+.project-tile.full {
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/Home/game_dev_screenshot.jpg);
+
+    background-size: cover;
+    background-position: center;
+}
+
+.half-row {
+    display: flex;
+}
+
+.project-tile.half {
+    width: 50%;
+    margin: 2%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/Home/code.png);
+
+    background-size: cover;
+    background-position: center;
+}
+
+.project-tile.half:last-child {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/Home/illustrator_work.png);
+
+    background-size: cover;
+    background-position: center;
+}
+
+.project-tile h4 {
+    font-size: 28px;
+}
+
+.project-tile:link, .project-tile:active {
+    color: white;
+}
+
+/*button group*/
+.button-group {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+}
+  
+.cta-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 20px;
+  width: 25%;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+
+  transform: scale(1);
+}
+
+.red-button {
+    background-color: #C32032;
+}
+
+.gray-button {
+    background-color: #56A3A6;
+}
+
+.red-button, .gray-button, .red-button:link, .gray-button:link, .red-button:active, .gray-button:active, .red-button:hover, .gray-button:hover {
+    color:white;
+}
+
+.cta-button .button-text,
+.cta-button .arrow {
+  transition: margin 0.3s ease;
+}
+
+.cta-button .button-text {
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.cta-button .arrow {
+  margin-left: 1%;
+}
+
+/* On hover, add space between text and arrow */
+.cta-button:hover .button-text {
+  margin-left: 0;
+  margin-right: 5%;
+}
+
+.cta-button:hover .arrow {
+  margin-left: 10%;
+  margin-right: 0;
+}
+
+.cta-button:active {
+    transform: scale(0.95);
+}
+
+
+
+/*Work experience page styling--------------------------------------------*/
+.blank-hero-section {
+    margin-top: 15rem;
+    text-align: center;
+}
+
+.blank-hero-section h1 {
+    display: flex;
+    justify-content: center;
+    color:#C32032;
+}
+
+#experienceTilesColumn {
+    margin: 15%;
+}
+
+.experienceTile {
+    display: flex;
+    align-items: center;
+    margin: 3% 0;
+}
+
+.experienceTile img {
+    width:30%;
+    height: 100%;
+    margin: 2%;
+}
+
+.experienceInfoBlock {
+    padding: 5%;
+    border-radius: 50px;
+    
+    color:white;
+}
+
+
+
+/*References page styling------------------------------------------------*/
+#referenceTiles {
+    display: flex;
+    color:black;
+    margin-bottom: 12%;
+    align-items: center;
+    justify-content: center;
+}
+
+.referenceColumn {
+    width: 45%;
+}
+
+.referenceTile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    margin: 25% 1%;
+    text-align: center;
+}
+
+.referenceTile h5 {
+    color:#C32032;
+    font-size: 45px;
+}
+
+.referenceTile a {
+    width: 50%;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+
+    background-color: #C32032;
+    color: white;
+
+    border-radius: 35px;
+    padding: 0 10%;
+    margin: 2%;
+
+    font-size: 16px;
+
+    transform: scale(1);
+    transition: transform .3s;
+}
+
+.referenceTile a:hover {
+    transform: scale(1.1);
+}
+
+.referenceTile a img {
+    width: 20%;
+    height: 100%;
+    margin-right: 10%;
+}
+
+.referenceButtonHeader {
+    font-size: 25px;
+}
+
+
+
+/*Contact page styling---------------------------------------------------*/
+/* Form container */
+.contact-form {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: "Numans", Arial, sans-serif;
+}
+
+/* Row for first and last name */
+.form-row {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Form group styling */
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: "Numans", Arial, sans-serif;
+  font-size: 1rem;
+  color: #333;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color:#56A3A6;
+  font-family: "Numans", Arial, sans-serif;
+}
+
+/* Submit button container */
+.form-submit {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.form-submit button {
+    font-size: 20px;
+    border: none;
+
+    transform:scale(1);
+
+    transition: all .3s;
+}
+
+.form-submit button:hover {
+    background-color: white;
+    color:#C32032;
+    cursor: pointer;
+
+    transform: scale(1.05);
+}
+
+.form-submit button:active {
+    transform: scale(0.95);
+}
+
+#contactDetailsSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactTile {
+
+    width: 100%;
+    height: 100%;
+    margin: 1%;
+    padding: 2%;
+    border-radius: 25px;
+    background-color: #C32032;
+
+    font-size: 12px;
+}
+
+.contactTile img {
+    width: 50px;
+}
+
+.contactTile:link{
+    color:white;
+}
+
+.contactButtonHeader {
+    font-size: 20px;
+}
+
+iframe {
+    width: 100%;
+    height: 400px;
+}
+
+.socials-button img{
+    width: 8rem;
+    height: 100%;
+    margin: 1%;
+    transform:scale(1);
+    transition: all .3s;
+}
+
+.socials-button img:hover {
+    transform:scale(1.1);
+}
+
+
+
+
+/*Game development-------------------------------------------------------*/
+.twoColumns {
+    display: flex;
+    align-items: center;
+}
+
+.twoColumns img {
+    width: 50%;
+    height: 100%;
+    padding: 3rem;
+}
+
+.imageGrid {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin: 5% 2%;
+}
+
+.imageGrid img {
+    width: 45%;
+    margin: 2%;
+}
+
+.gamesTileGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gameTile {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 5% 2%;
+}
+
+.gameTile img {
+    width: 100%;
+    height: 100%;
+}
+
+.gameTile h5 {
+    margin: 1.5rem 0;
+}
+
+.gameTile a {
+    width: 70%;
+}
+
+
+
+/*Graphic design--------------------------------------------------------*/
+.graphics-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.graphics-grid img {
+    width: 30%;
+    height: 100%;
+    margin: 1%;
+}
+
+
+
+
+/*footer styling---------------------------------------------------------*/
+
+footer {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer ul {
+    list-style-type: none;
+}
+
+footer ul li {
+    margin: 5%;
+}
+
+footer a {
+    text-decoration: none;
+    color:#C32032;
+}
+
+#primaryFooter, #secondaryFooter {
+    width: 100%;
+}
+
+#primaryFooter {
+    padding: 3% 0 1% 0;
+    clip-path: polygon(0 0%, 50% 50%, 100% 0%, 100% 100%, 0% 100%);
+    margin-top: -10%;
+    z-index: 500;
+
+    background-color: white;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+#primaryFooter ul {
+    width: 35%;
+    margin: 0;
+    padding: 0;
+}
+
+#secondaryFooter {
+    background-color: #C32032;
+    color:white;
+    font-size: 10px;
+}
+
+#image-and-links {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding:0;
+    margin:0;
+    width: 35%;
+}
+
+#image-and-links ul {
+    width:100%;
+    padding-left: 5%;
+}
+
+footer .logo {
+    width: 150px;
+    height: 100%;
+}
+
+#socials {
+    width: 25%;
+}
+
+#socials img {
+    width: 60px;
+    height: auto;
+
+    margin: 0 3%;
+}
+
+
+@media screen and (max-width: 1400px) {
+    #image-and-links {
+        justify-content: flex-start;
+    }
+    #image-and-links ul {
+        display: none;    
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #primaryFooter {
+        clip-path: none;
+
+    }
+
+    #image-and-links {
+        width:auto;
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+
+    body {
+        font-size: 0.9rem;
+    }
+    h4 {
+        font-size: 1.7rem;
+    }
+
+    /*header styling*/
+    .angled-header {
+        background-color: white;
+        background-image: none;
+    }
+
+    header nav ul{
+        align-items: center;
+    }
+
+    /*footer styling*/
+    #primaryFooter {
+        
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    #primaryFooter ul, #socials, #image-and-links {
+        width: 100%;
+    }
+
+    #image-and-links {
+        justify-content: center;
+    }
+
+    #socials {
+        margin-top: 5%;
+    }
+
+    .right {
+        text-align: center;
+    }
+
+    .angle-normal {
+        clip-path: none;
+    }
+
+    .angle-reverse {
+        clip-path: none;
+    }
+
+    .angle-normal-bottom {
+        clip-path: none;
+    }
+
+    .angle-reverse-bottom {
+        clip-path: none;
+    }
+
+    .angled-section {
+        margin: 0;
+    
+        padding: 5rem;
+        position: relative;
+        /* top slant: 5% down; bottom slant: 5% up */
+    }
+
+    #primaryFooter {
+        margin: 0;
+    }
+
+    .cta-button {
+        width: 45%;
+    }
+
+    .hero-left {
+        height: 100%;
+        text-align: center;
+        padding: 3rem;
+        background-size: cover;
+    }
+
+    .hero-right {
+        display: none;
+    }
+
+    .hero-section {
+        display: block;
+        height: 100vh;
+    }
+
+    .blank-hero-section {
+        margin-bottom: 20vh;
+    }
+
+    .skillsSection {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .skillsSection.notOnDesktop {
+        display: flex;
+    }
+
+    .skillsSection.notOnMobile {
+        display: none;
+    }
+
+    .skillsSectionRow {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        width:100%;
+    }
+    
+    .skillTile {
+        width: 250px;    
+    }
+
+    .skillTile img {
+        width: 30%;
+    }
+
+    #homeMobileHero, #contactMobileHero {
+        background-position: center top;
+        background-size: cover;
+    }
+
+    #homeMobileHero {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/Home/headshot.jpeg);
+        background-size: cover;
+        background-position: center center;
+        
+    }
+
+    #gameDevMobileHero {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/Game-Design/Neon-Revolution-Cover-Image.jpg);
+        background-size: cover;
+        background-position: center center;
+    }
+
+    #webDesignMobileHero {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/Web-Design/code.png);
+        background-size: cover;
+        background-position: center center;
+    }
+
+    #graphicDesignMobileHero {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/Graphic-Design/robertsC_album_cover_front_page-0001.jpg);
+        background-size: cover;
+        background-position: center center;
+    }
+
+    #contactMobileHero {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/Contact/contact-hero-image.jpg);
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .experienceTile {
+        display: block;
+    }
+
+    .experienceTile img {
+        display: none;
+    }
+
+    .twoColumns {
+        flex-direction: column;
+    }
+
+    .reverseOnMobile {
+        flex-direction: column-reverse;
+    }
+
+    #referenceTiles {
+        flex-direction: column;
+    }
+
+    #referenceTiles h5{
+        font-size: 2rem;
+    }
+    
+    .referenceColumn {
+        width: 90%;
+        margin: 0;
+    }
+    
+    .referenceTile {
+    
+        margin: 15% 1%;
+    }
+
+    .referenceTile a {
+        width: 70%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .referenceTile a img {
+        margin: 15px 0 0 0;
+    }
+
+    .referenceButtonHeader {
+        display: none;
+    }
+
+    .referenceTile a img {
+        width: 10%;
+    }
+    
+}
+
+@media screen and (max-width: 900px) {
+    .desktopHeaderItem {
+        display: none;
+    }
+    
+    .mobileHeaderItem {
+        display: block;
+    }
+
+    #topLogo {
+        justify-self: center;
+        display: flex;
+        justify-content: center;
+    }
+    
+    #topLogo img{
+        width: 12%;
+        margin: 2% 0% 0% 0%;
+    }
+
+    nav a, .dropbtn {
+        padding: 10px 15px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .button-group {
+        flex-direction: column;
+    }
+
+    .cta-button {
+        width: 80%;
+    }
+
+    .skillTile {
+        width: 60%;
+    
+    }
+
+    .half-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-tile.half{
+        width: 100%;
+    }
+
+    .angled-section {
+    
+        padding: 5rem 1rem;
+    }
+
+    .gamesTileGrid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gameTile {
+        width:70%;
+    }
+
+    h1 {
+        font-size: 65px;
+    }
+
+    .twoColumns img {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .angled-header {
+        background-color: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(10px); /* blurs what's behind */
+        -webkit-backdrop-filter: blur(10px); /* Safari support */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* optional: adds depth */
+        padding: 0;
+    }
+
+    nav {
+      display: none;
+    }
+  
+    .mobile-header {
+      display: flex;
+    }
+
+    #topLogo {
+        display: none;
+    }
+
+    .graphics-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .graphics-grid img {
+        width: 80%;
+    }
+
+    h1 {
+        font-size: 55px;
+    }
+
+    #experienceTilesColumn {
+        margin: 15% 5%;
+    }
+
+    .referenceTile a img {
+        width: 20%;
+    }
+
+    #contactDetailsSection {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contactTile {
+        width: 80%;
+    }
+
+    .contactTile img {
+        margin-top: 15px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .skillTile {
+        width: 90%;
+    
+    }
+
+    .hero-left {
+        padding: 1rem;
+    }
+
+    .skillsSectionRow {
+        flex-direction: column;
+        align-items: center;
+        width:100%;
+    }
+
+    .skillTile {
+        width: 70%;    
+    }
+
+    .socials-button img {
+        width: 5rem;
+    }
+}

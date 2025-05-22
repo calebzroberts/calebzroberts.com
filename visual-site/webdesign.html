@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="images/pinwheel_fullColorsvg.svg">
+
+  <title>Web Design</title>
+  <style>
+    #heroImage {
+      background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)), url(images/web_design_hero_image.jpg);
+      background-size: cover;
+      background-position: bottom;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      font-size: 30px;
+    }
+    #teacherImage {
+    margin: 0% 7% 0% 7%;
+    background: url(images/headshots/redcay_headshot.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    font-size: 30px;
+    }
+
+    button {
+      background-color: rgb(190,220,85);
+    }
+    button:hover {
+      color: rgb(190,220,85);
+    }
+
+    .activeSite, a.activeSite {
+    color: #BEDC55;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div id="logoTitle">
+      <a href="index.html">
+        <img class="logo" src="images/logos/officialLogo_blockVersion_green.svg" alt="ctc logo">
+      </a>
+    </div>
+    <nav>
+      <p><a href="index.html" title="Home Page">Home</a></p>
+      <p><a href="introvisual.html" title="Intro to visual communications page">Intro to Visual</a></p>
+      <p><a href="digitaldesign.html" title="Digital Design Page">Digital Design</a></p>
+      <p><a class="activeSite" href="webdesign.html" title="Web Design Page">Web Design</a></p>
+      <p><a href="photography.html" title="Photography Page">Photography</a></p>
+      <p><a href="commercialart.html" title="Commercial Art Page">Commercial Art</a></p>
+      <div class="dropdown">
+        <button class="dropbtn">Menu
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="index.html" title="Home Page">Home</a>
+          <a href="introvisual.html" title="Intro to visual communications page">Intro to Visual</a>
+          <a href="digitaldesign.html" title="Digital Design Page">Digital Design</a>
+          <a class="activeSite" href="webdesign.html" title="Web Design Page">Web Design</a>
+          <a href="photography.html" title="Photography Page">Photography</a>
+          <a href="commercialart.html" title="Commercial Art Page">Commercial Art</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="heroImage">
+      <br>
+      <h1>Learn to Create Your Own Websites!</h1>
+      <br>
+      <div id="topButtons">
+        <form action="#teacherSection" method="get">
+          <button>MORE INFO &darr;</button>
+        </form>
+
+        <form action="https://lcctc.smapply.org/" method="get">
+          <button>APPLY TODAY &rarr;</button>
+        </form>
+      </div>
+      <br>
+      <br>
+    </section>
+
+    <section id="teacherSection">
+      <h1>Meet the Teacher</h1>
+      <div>
+        <div id="teacherImage">
+          <img src="images/teacher_silhouette.jpg" alt="teacher image">
+
+        </div>
+
+        <p>
+          Mr. Redcay <br>
+          Mr. Redcay has been at the Brownstown CTC for 7 total years. In his class, you can expect some exciting web
+          design projects, including the Food Truck
+          project, and the 20% project, which accounts for 20 percent of the total yearly grade. He has 2 children, a
+          wife, and a dog at home and loves softball,
+          coaching, and working on old cars outside of CTC.
+
+        </p>
+      </div>
+
+    </section>
+
+    <section id="highlights">
+      <div class="featureHighlight">
+        <img class="icon" src="images/layout.svg" alt="web layout icon">
+        <p>
+          <b>Create Appealing <br> Designs</b>
+        </p>
+      </div>
+      <div class="featureHighlight">
+        <img class="icon" src="images/handshake.svg" alt="handshake icon">
+        <p>
+          <b>Connect With <br> Clients</b>
+        </p>
+      </div>
+
+      <div class="featureHighlight">
+        <img class="icon" src="images/code_terminal.svg" alt="terminal icon">
+        <p>
+          <b>Code Full <br>Websites</b>
+        </p>
+      </div>
+    </section>
+
+    <section id="imagesSection">
+      <img src="images/webdesign1.jpg" alt="card designs">
+      <img src="images/webdesign2.jpg" alt="monitors and chairs">
+    </section>
+
+    <!--
+        <section id="programSection">
+          <br>
+
+          <h1>About the Program</h1>
+
+          <div>
+            <img src="images/digital_design_image.jpg" alt="teacher image">
+            <p>
+              Learn how drawing, computer graphics, and photography can deliver powerful visual 
+              impact in this half-day program designed to give you a taste of our full-day visual 
+              communications programs. Capture photographs and design reproductions using the same 
+              digital tools as professional graphic artists and commercial printers.
+            </p>
+          </div>
+        </section>
+-->
+
+
+
+  </main>
+
+  <footer>
+    <br>
+    <div id="topButtons">
+      <form action="https://lancasterctc.edu/academics/high-school/visual-communications/interactive-media-web-design/"
+        target=”_blank” method="get">
+        <button>MORE INFO &rarr;</button>
+      </form>
+
+      <form action="https://lcctc.smapply.org/" method="get">
+        <button>APPLY TODAY &rarr;</button>
+      </form>
+    </div>
+    <div>
+      <img class="logo pinwheel" src="images/pinwheel_interactiveMedia.svg" alt="ctc logo" onclick="location.href='index.html';">
+      <h1>Lancaster Career & Technology Center</h1>
+    </div>
+  </footer>
+</body>
+
+</html>

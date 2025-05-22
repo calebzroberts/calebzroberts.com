@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>   	    
+        <meta charset="utf-8">
+        <title>Contact Me - Caleb's Portfolio</title>
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<link rel="stylesheet" href="portfolio-style.css">
+        <link rel="icon" type="image/x-icon" href="images/site-logo.png">
+	    <script src="https://cdn.userway.org/widget.js" data-account="BCw7PWHG0g" data-position="3"></script>
+    </head>
+
+    <body>
+
+        <header class="angled-header">
+            <a class="mobileHeaderItem" id="topLogo" href="index.html" title="home"><img src="images/site-logo.png" alt="Caleb Roberts Logo"></a>
+
+            <nav>
+              <ul>
+                <li class="navText"><a href="index.html">Home</a></li>
+                <li class="navText">
+                    <div class="dropdown">
+                        <button class="dropbtn">My Background</button>
+
+                        <div class="dropdown-content">
+                            <a href="work-experience.html" title="Work Experience Page">Work Experience</a>
+                            <a href="education.html" title="Education Page">Education</a>
+                            <a href="references.html" title="References Page">References</a>
+                        </div>
+            
+                    </div>
+                </li>
+                <li class="logo"><a class="desktopHeaderItem" href="index.html" title="home"><img src="images/site-logo.png" alt="Caleb Roberts Logo"></a></li>
+                <li class="navText">
+                    <div class="dropdown">
+                        <button class="dropbtn">My Work</button>
+
+                        <div class="dropdown-content">
+                            <a href="game-development.html" title="Game Development Page">Game Development</a>
+                            <a href="web-design.html" title="Web Design Page">Web Design</a>
+                            <a href="graphic-design.html" title="Graphic Design Page">Graphic Design</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="navText"><a href="contact.html">Contact</a></li>
+              </ul>
+            </nav>
+
+            <div class="mobile-header">
+                <a href="index.html" class="mobile-logo"><img src="images/site-logo.png" alt="Logo"></a>
+                <button id="menu-toggle" aria-label="Toggle Menu" style="color: black;">
+                  &#9776;
+                </button>
+            </div>
+              
+            <div id="mobile-menu" class="mobile-menu">
+                <button id="close-menu" aria-label="Close Menu">&times;</button>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="work-experience.html">Work Experience</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="references.html">References</a></li>
+                    <li><a href="game-development.html">Game Development</a></li>
+                    <li><a href="web-design.html">Web Design</a></li>
+                    <li><a href="graphic-design.html">Graphic Design</a></li>                    
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+        </header>
+
+
+        <article id="main">
+
+            <section class="hero-section">
+                <div class="hero-left" id="contactMobileHero">
+                    <h1>Contact Me</h1>
+                    <h2>Get in touch today</h2>
+                </div>
+                <div class="hero-right" style="background-image: 
+                linear-gradient(to left, transparent, black 100%),
+                url('images/Contact/contact-hero-image.jpg'); 
+            background-size: cover;
+            background-position: top;"></div>
+            </section>
+
+            <section class="angled-section red-section angle-normal" style="z-index: 1;">
+                <div class="content center">
+                    <h3>Let's Get In Touch</h3>
+                    <p>
+                        Fill out the form below to send me a message and I will get back to as soon as I can. I look forward to hearing from you!
+                    </p>
+                    <form action="https://formsubmit.co/caleb.roberts798@gmail.com" method="POST">
+                        <div class="form-row">
+                          <div class="form-group">
+                            <label for="first-name">First Name</label>
+                            <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
+                          </div>
+                          <div class="form-group">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+                          </div>
+                        </div>
+                      
+                        <div class="form-group">
+                          <label for="email">Email</label>
+                          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                        </div>
+                      
+                        <div class="form-group">
+                          <label for="message">Message</label>
+                          <textarea id="message" name="message" placeholder="Your message..." rows="5" required></textarea>
+                        </div>
+                      
+                        <div class="form-submit">
+                          <button type="submit" class="cta-button gray-button">Submit</button>
+                        </div>
+                      </form>
+                      
+                </div>
+            </section>
+
+            <section class="white-section angled-section angle-reverse" style="z-index: 2;">
+                <div class="content center">
+                    <h3>Contact Me Directly</h3>
+                    <div id="contactDetailsSection">
+                        <a class="contactTile" href="tel:+17174796042">
+                            <img src="images/Buttons-icons/phone-white.png" alt="phone icon">
+
+                            <div class="buttonText">
+                                <p class="contactButtonHeader">Phone</p>
+                                <p>(717)-479-6042)</p>
+                            </div>
+                        </a>
+
+                        <a class="contactTile" href="mailto:caleb.roberts798@gmail.com">
+                            <img src="images/Buttons-icons/envelope-white.png" alt="envelope icon">
+
+                            <div class="buttonText">
+                                <p class="contactButtonHeader">Email</p>
+                                <p>caleb.roberts798@gmail.com</p>
+                            </div>
+                        </a>
+
+                        <a class="contactTile" href="mailto:caleb.roberts798@gmail.com">
+                            <img src="images/Buttons-icons/map-white.png" alt="map pin icon">
+
+                            <div class="buttonText">
+                                <p class="contactButtonHeader">Location</p>
+                                <p>Lancaster, PA</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="angled-section gray-section angle-normal" style="z-index: 3;">
+                <div class="content center">
+                    <h3>Location</h3>
+                    <p>I am based in Lancaster, PA</p>
+
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55173.564194381506!2d-76.3779789507808!3d40.039892557101744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6248b917214b9%3A0xb46790d030dbd2d6!2sLancaster%2C%20PA!5e1!3m2!1sen!2sus!4v1747744244976!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </section>
+
+            <section class="angled-section angle-reverse red-section" style="z-index: 4;">
+                <div class="content center">
+                    <h3>Social Media</h3>
+                    <p>
+                        I am on multiple social media platforms. Check them out with the buttons below!
+                    </p>
+
+                    <div class="socials-group">
+                        <a href="https://instagram.com" class="socials-button">
+                            <img src="images/Buttons-icons/instagram-white.png" alt="instagram icon">
+                        </a>
+                        <a href="https://facebook.com" class="socials-button">
+                            <img src="images/Buttons-icons/facebook-white.png" alt="facebook icon">
+                        </a>
+                        <a href="https://linkedin.com" class="socials-button">
+                            <img src="images/Buttons-icons/linkedin-white.png" alt="linkedin icon">
+                        </a>
+                    </div>
+                </div>
+            </section>
+            
+
+        </article>
+
+        <footer>
+            <div id="primaryFooter">
+
+                <div id="image-and-links">
+                    <img class="logo" src="images/site-logo.png" alt="Caleb Roberts Logo">
+
+                
+
+                    <ul>
+                        <li><a href="projects.html" title="Projects Page">My Work</a></li>
+                        <li><a href="work-experience.html" title="Work Experience Page">My Experience</a></li>
+                        <li><a href="contact.html" title="Contact Page">Contact Me</a></li>
+                    </ul>
+                </div>
+                
+
+                <div class="center" id="socials">
+                    <a href="https://linkedin.com"><img class="footerSocial" src="images/Buttons-icons/linkedin-gray.png" alt="linkedIn logo"></a>
+                    <a href="https://instagram.com"><img class="footerSocial" src="images/Buttons-icons/insta-gray.png" alt="instagram logo"></a>
+                    <a href="https://facebook.com"><img class="footerSocial" src="images/Buttons-icons/facebook-gray.png" alt="facebook logo"></a>
+                </div>
+
+                
+                <ul class="right">
+                    <li><a href="tel:+17174796042">717-479-6042</a></li>
+                    <li><a href="contact.html">Lancaster, PA</a></li>
+                    <li><a href="mailto:caleb.roberts798@gmail.com">caleb.roberts798@gmail.com</a></li>
+                </ul>
+            </div>
+            <div class="center" id="secondaryFooter">
+                <p>&copy;Copyright 2025 Caleb Roberts</p>
+            </div>
+        </footer>
+        
+
+        <!--makes the header background change to white once off the main hero image screen-->
+        <script src="scroll-effect.js"></script>
+
+        <script src="javascript/mobile-menu.js"></script>
+
+    </body>
+
+
+
+</html>

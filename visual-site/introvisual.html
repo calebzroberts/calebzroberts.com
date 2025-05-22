@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="images/pinwheel_fullColorsvg.svg">
+
+  <title>Visual Communications Program</title>
+  <style>
+    #heroImage {
+      background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.5)), url(images/intro_to_visual_hero_image.jpg);
+      background-size: cover;
+      background-position: bottom;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      font-size: 30px;
+    }
+
+    #teacherImage {
+    margin: 0% 7% 0% 7%;
+    background: url(images/headshots/hess_headshot.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    font-size: 30px;
+    }
+
+    button {
+      background-color: rgb(40,40,40);
+    }
+    button:hover {
+      color: rgb(40,40,40);
+    }
+    .activeSite, a.activeSite {
+    color: #101010;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div id="logoTitle">
+      <a href="index.html">
+        <img class="logo" src="images/logos/officialLogo_blockVersion_black.svg" alt="ctc logo">
+      </a>
+    </div>
+
+    <nav>
+      <p><a href="index.html" title="Home Page">Home</a></p>
+      <p><a class="activeSite" href="introvisual.html" title="Intro to visual communications page">Intro to Visual</a>
+      </p>
+      <p><a href="digitaldesign.html" title="Digital Design Page">Digital Design</a></p>
+      <p><a href="webdesign.html" title="Web Design Page">Web Design</a></p>
+      <p><a href="photography.html" title="Photography Page">Photography</a></p>
+      <p><a href="commercialart.html" title="Commercial Art Page">Commercial Art</a></p>
+      <div class="dropdown">
+        <button class="dropbtn">Menu
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="index.html" title="Home Page">Home</a>
+          <a class="activeSite" href="introvisual.html" title="Intro to visual communications page">Intro to Visual</a>
+          <a href="digitaldesign.html" title="Digital Design Page">Digital Design</a>
+          <a href="webdesign.html" title="Web Design Page">Web Design</a>
+          <a href="photography.html" title="Photography Page">Photography</a>
+          <a href="commercialart.html" title="Commercial Art Page">Commercial Art</a>
+        </div>
+      </div>
+    </nav>
+
+  </header>
+
+  <main>
+    <section id="heroImage">
+      <br>
+      <h1>Get Exposed to All the Visual Programs!</h1>
+      <br>
+      <div id="topButtons">
+        <form action="#teacherSection" method="get">
+          <button>MORE INFO &darr;</button>
+        </form>
+
+        <form action="https://lcctc.smapply.org/" method="get">
+          <button>APPLY TODAY &rarr;</button>
+        </form>
+      </div>
+      <br>
+      <br>
+    </section>
+
+    <section id="teacherSection">
+      <h1>Meet the Teacher</h1>
+      <div>
+        <div id="teacherImage">
+          <img src="images/teacher_silhouette.jpg" alt="teacher image">
+        </div>
+
+        <p>
+          Mr. Hess <br>
+          With 30 years in the design industry and 13 years spent at Brownstown CTC, Mr. Hess has helped shape the
+          future of countless aspiring designers. A few notable projects in the Intro to Visual Communications program
+          include the Cereal Box Project and Season’s Greeting Cards. These projects enable students to develop skills
+          and find success in design. Outside of CTC, Mr. Hess enjoys being outdoors by flying drones, motorcycling and
+          kayaking. Above all, Mr. Hess is a proud grandfather to two grandsons, whom he loves and takes on exciting
+          adventures.
+        </p>
+      </div>
+
+    </section>
+
+    <section id="highlights">
+      <div class="featureHighlight">
+        <img class="icon" src="images/hand.svg" alt="hand icon">
+        <p>
+          <B>Hands-on <br>Learning</B>
+        </p>
+      </div>
+      <div class="featureHighlight">
+        <img class="icon" src="images/construction_tools.svg" alt="tools icon">
+        <p>
+          <b>Mastering <br>Digital Tools</b>
+        </p>
+      </div>
+
+      <div class="featureHighlight">
+        <img class="icon" src="images/up_trend.svg" alt="upward trend icon">
+        <p>
+          <b>Preparing for <br>Future Programs</b>
+        </p>
+      </div>
+    </section>
+
+    <section id="imagesSection">
+      <img src="images/intro1.jpg" alt="record designs">
+      <img src="images/intro2.jpg" alt="graphite design">
+    </section>
+
+    <!--
+        <section id="programSection">
+          <br>
+
+          <h1>About the Program</h1>
+
+          <div>
+            <img src="images/digital_design_image.jpg" alt="teacher image">
+            <p>
+              Learn how drawing, computer graphics, and photography can deliver powerful visual 
+              impact in this half-day program designed to give you a taste of our full-day visual 
+              communications programs. Capture photographs and design reproductions using the same 
+              digital tools as professional graphic artists and commercial printers.
+            </p>
+          </div>
+        </section>
+-->
+
+
+
+  </main>
+
+  <footer>
+    <br>
+    <div id="topButtons">
+      <form
+        action="https://lancasterctc.edu/academics/high-school/visual-communications/introduction-to-visual-communications-careers/"
+        target=”_blank” method="get">
+        <button>MORE INFO &rarr;</button>
+      </form>
+
+      <form action="https://lcctc.smapply.org/" method="get">
+        <button>APPLY TODAY &rarr;</button>
+      </form>
+    </div>
+    <div>
+      <img class="logo pinwheel" src="images/pinwheel_introDesign.svg" alt="ctc logo" onclick="location.href='index.html';">
+      <h1>Lancaster Career & Technology Center</h1>
+    </div>
+  </footer>
+</body>
+
+</html>

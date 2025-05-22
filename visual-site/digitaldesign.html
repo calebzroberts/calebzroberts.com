@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="images/pinwheel_fullColorsvg.svg">
+
+  <title>Digital Design</title>
+  <style>
+    #teacherImage {
+    margin: 0% 7% 0% 7%;
+    background: url(images/headshots/huber_headshot.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    font-size: 30px;
+    }
+
+    button {
+      background-color: rgb(210,140,80);
+    }
+    button:hover {
+      color: rgb(210,140,80);
+    }
+    .activeSite, a.activeSite {
+    color: #D28C50;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div id="logoTitle">
+      <a href="index.html">
+        <img class="logo" src="images/logos/officialLogo_blockVersion_orange.svg" alt="ctc logo">
+      </a>
+    </div>
+    <nav>
+      <p><a href="index.html" title="Home Page">Home</a></p>
+      <p><a href="introvisual.html" title="Intro to visual communications page">Intro to Visual</a></p>
+      <p><a class="activeSite" href="digitaldesign.html" title="Digital Design Page">Digital Design</a></p>
+      <p><a href="webdesign.html" title="Web Design Page">Web Design</a></p>
+      <p><a href="photography.html" title="Photography Page">Photography</a></p>
+      <p><a href="commercialart.html" title="Commercial Art Page">Commercial Art</a></p>
+      <div class="dropdown">
+        <button class="dropbtn">Menu
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="index.html" title="Home Page">Home</a>
+          <a href="introvisual.html" title="Intro to visual communications page">Intro to Visual</a>
+          <a class="activeSite" href="digitaldesign.html" title="Digital Design Page">Digital Design</a>
+          <a href="webdesign.html" title="Web Design Page">Web Design</a>
+          <a href="photography.html" title="Photography Page">Photography</a>
+          <a href="commercialart.html" title="Commercial Art Page">Commercial Art</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="heroImage">
+      <br>
+      <h1>Express Your Creativity Through Printing!</h1>
+      <br>
+      <div id="topButtons">
+        <form action="#teacherSection" method="get">
+          <button>MORE INFO &darr;</button>
+        </form>
+
+        <form action="https://lcctc.smapply.org/" method="get">
+          <button>APPLY TODAY &rarr;</button>
+        </form>
+      </div>
+      <br>
+      <br>
+    </section>
+
+    <section id="teacherSection">
+      <h1>Meet the Teacher</h1>
+      <div>
+        <div id="teacherImage">
+          <img src="images/print_media_teacher_final.jpg" alt="teacher image">
+
+        </div>
+        <p>
+          Mr. Huber <br>
+          Mr. Huber has been at the Brownstown CTC for two total years. In his program, you can expect exciting projects
+          like the Cereal Box project and Comic Book project. These help build a foundation for future careers in
+          digital design and print media. Outside of CTC, Mr. Huber loves his family, which consists of his wife and
+          daughter. In his spare time, he enjoys movies, crafting, and travel.
+        </p>
+      </div>
+
+    </section>
+
+    <section id="highlights">
+      <div class="featureHighlight">
+        <img class="icon" src="images/theater_masks.svg" alt="theater masks icon">
+        <p>
+          <b>Creative Industry <br>Skills</b>
+        </p>
+      </div>
+      <div class="featureHighlight">
+        <img class="icon" src="images/computer.svg" alt="computer icon">
+        <p>
+          <b>Professional-grade <br>Tools</b>
+        </p>
+      </div>
+
+      <div class="featureHighlight">
+        <img class="icon" src="images/folder.svg" alt="folder icon">
+        <p>
+          <b>Project-based <br>Learning</b>
+        </p>
+      </div>
+    </section>
+
+    <section id="imagesSection">
+      <img src="images/digitaldesign1.jpg" alt="art printed banners">
+      <img src="images/digitaldesign2.jpg" alt="student drawing">
+    </section>
+
+    <!--
+        <section id="programSection">
+          <br>
+
+          <h1>About the Program</h1>
+
+          <div>
+            <img src="images/digital_design_image.jpg" alt="teacher image">
+            <p>
+              Learn how drawing, computer graphics, and photography can deliver powerful visual 
+              impact in this half-day program designed to give you a taste of our full-day visual 
+              communications programs. Capture photographs and design reproductions using the same 
+              digital tools as professional graphic artists and commercial printers.
+            </p>
+          </div>
+        </section>
+-->
+
+
+
+  </main>
+
+  <footer>
+    <br>
+    <div id="topButtons">
+      <form action="https://lancasterctc.edu/academics/high-school/visual-communications/digital-design-print-media/"
+        target=”_blank” method="get">
+        <button>MORE INFO &rarr;</button>
+      </form>
+
+      <form action="https://lcctc.smapply.org/" method="get">
+        <button>APPLY TODAY &rarr;</button>
+      </form>
+    </div>
+    <div>
+      <img class="logo pinwheel" src="images/pinwheel_printMedia.svg" alt="ctc logo" onclick="location.href='index.html';">
+      <h1>Lancaster Career & Technology Center</h1>
+    </div>
+  </footer>
+</body>
+
+</html>
