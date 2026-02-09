@@ -35,17 +35,26 @@ body {
     animation: gridScroll 30s linear infinite;
 }
 
-.body::before {
-    /* This creates the smooth following effect */
+body::before {
+    content: ""; /* Required for pseudo-elements to render */
+    position: fixed; /* Fixes it to the viewport so it follows as you scroll */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    
+    /* Your Gradient Logic */
     background: radial-gradient(
         circle 500px at var(--mouse-x, 50%) var(--mouse-y, 50%), 
         rgba(195, 32, 50, 0.12), 
         transparent 70%
     );
-    pointer-events: none;
-    z-index: 1;
-    /* The magic line: smooths out the glow movement */
-    transition: background 0.2s ease-out; 
+    
+    pointer-events: none; /* Crucial: lets you click buttons "through" the glow */
+    z-index: -1; /* Place it behind text/buttons, but above the black background */
+    
+    /* Smooth movement */
+    transition: background 0.2s ease-out;
 }
 
 @keyframes gridScroll {
