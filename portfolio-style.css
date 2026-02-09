@@ -91,7 +91,7 @@ h6 {
 a { transition: all 0.3s ease; }
 
 a:link {
-    color:#C32032;
+    
     text-decoration: none;
 }
 
@@ -653,6 +653,23 @@ nav ul {
 
 .cta-terminal:hover .btn-code {
     color: white;
+}
+
+/*secondary button code*/
+.cta-terminal.secondary {
+    background: var(--main-red);
+}
+
+.cta-terminal.secondary:hover {
+    background: none;
+}
+
+.cta-terminal.secondary .btn-code{
+    color: var(--text-dim);
+}
+
+.cta-terminal.secondary:hover .btn-code{
+    color:var(--main-red);
 }
 
 
