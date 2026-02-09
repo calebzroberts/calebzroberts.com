@@ -28,11 +28,6 @@ body {
     background-size: 40px 40px;
 }
 
-/* Remove "White Space" and High School Angles */
-.white-section { background-color: #111; color: white; }
-.gray-section { background-color: #1a1a1a; color: white; }
-.red-section { background-color: var(--main-red); }
-
 .angled-section {
     padding: 2rem 2rem 4rem 2rem;
     border-bottom: 1px solid var(--grid-color);
@@ -173,7 +168,7 @@ html.lenis, html.lenis body {
 
 /*Header styling----------------------------------------------------------------------*/
 
-.angled-header {
+header {
     position: fixed; /* Keep it at the top while scrolling */
     top: 0;
     width: 100%;
@@ -306,7 +301,6 @@ nav ul {
 }
   
 /* When menu is active, fade in */
-/* Mobile Header Bar */
 .mobile-header {
     display: none; /* Hidden on desktop */
     justify-content: space-between;
@@ -365,8 +359,8 @@ nav ul {
     
     /* Smooth Scrolling Grid */
     background-image: 
-        linear-gradient(rgba(195, 32, 50, 0.08) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(195, 32, 50, 0.08) 1px, transparent 1px);
+        linear-gradient(rgba(195, 32, 50, 0.25) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(195, 32, 50, 0.25) 1px, transparent 1px);
     background-size: 60px 60px;
     /* Increased duration to 30s for a calmer, smoother crawl */
     animation: gridScroll 30s linear infinite;
@@ -458,30 +452,7 @@ nav ul {
 }
 
 /* The Terminal Buttons */
-.cta-terminal {
-    background: transparent;
-    border: 1px solid var(--main-red);
-    color: white;
-    padding: 15px 25px;
-    font-family: 'Fira Code', monospace;
-    text-decoration: none;
-    transition: 0.3s;
-    display: inline-block;
-}
 
-.cta-terminal:hover {
-    background: var(--main-red);
-    box-shadow: 0 0 15px var(--main-red);
-}
-
-.btn-code {
-    color: var(--main-red);
-    margin-right: 10px;
-}
-
-.cta-terminal:hover .btn-code {
-    color: white;
-}
 
 
 /*Primary sections styling-----------------------------------------------------------*/
@@ -489,34 +460,6 @@ nav ul {
 .content {
     max-width: 1200px;
     margin: 0 auto;
-}
-
-.red-section {
-    background-color: #C32032;
-    color: white;
-}
-
-.red-section h2 {
-    color:white;
-}
-
-.white-section {
-
-    background-color: #111;
-    color: white;
-}
-
-.white-section h3 {
-    color:#C32032;
-}
-
-.gray-section {
-    background-color: #1a1a1a;
-    color: white;
-}
-
-.gray-section h2 {
-    color:white;
 }
 
 /*Home Specific Styling-------------------------------------------------------*/
@@ -601,7 +544,6 @@ nav ul {
     transform: translateX(5px);
 }
 
-/* The "Tech" Corner Accent */
 /* Container for the tiles */
 .skills-grid {
     display: flex;
@@ -671,73 +613,6 @@ nav ul {
 }
 
 
-/*projects part*/
-.projects-container {
-    width: 100%;
-    margin: 5% auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.project-tile {
-    position: relative;
-    color: white;
-    text-decoration: none;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    min-height: 250px;
-    transition: transform 0.3s ease;
-
-    border-radius: 25px;
-
-}
-
-.project-tile:hover {
-    transform: scale(1.02);
-    color:white;
-}
-
-.project-tile.full {
-    width: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/Home/game_dev_screenshot.jpg);
-
-    background-size: cover;
-    background-position: center;
-}
-
-.half-row {
-    display: flex;
-}
-
-.project-tile.half {
-    width: 50%;
-    margin: 2%;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/Home/code.png);
-
-    background-size: cover;
-    background-position: center;
-}
-
-.project-tile.half:last-child {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/Home/illustrator_work.png);
-
-    background-size: cover;
-    background-position: center;
-}
-
-.project-tile h4 {
-    font-size: 28px;
-}
-
-.project-tile:link, .project-tile:active {
-    color: white;
-}
-
 /*button group*/
 .button-group {
     display: flex;
@@ -751,51 +626,72 @@ nav ul {
     justify-content: flex-start;
 }
 
-.cta-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.cta-terminal {
+    background: transparent;
+    border: 1px solid var(--main-red);
     color: white;
+    padding: 15px 25px;
+    font-family: 'Fira Code', monospace;
     text-decoration: none;
-    padding: 12px 24px;
-    border-radius: 0px; /* Sharp corners for a tech look */
-    width: auto; /* Let the content define width or set to a fixed % */
-    min-width: 180px;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    border: 1px solid transparent;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    transition: 0.3s;
+    display: inline-block;
+
+    transition: all .3s ease;
 }
 
-/* Red Button - Primary Action */
-.red-button {
-    background-color: #C32032;
-    border-color: #C32032;
+.cta-terminal:hover {
+    background: var(--main-red);
+    box-shadow: 0 0 15px var(--main-red);
 }
 
-/* Gray Button - Now a "System Gray" instead of Teal */
-.gray-button {
-    background-color: #2a2a2a;
-    border-color: #444;
+.btn-code {
+    color: var(--main-red);
+    margin-right: 10px;
+
+    transition: all .3s ease;
 }
 
-.cta-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(195, 32, 50, 0.3);
-    background-color: #e42539; /* Brighter red on hover */
-    border-color: white;
+.cta-terminal:hover .btn-code {
+    color: white;
 }
 
-.gray-button:hover {
-    background-color: #3a3a3a;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+
+
+/*New styling---------------------------------*/
+/* Update these in your CSS */
+
+/* Ensure the background layers stay fixed behind everything */
+.grid-background, .mouse-glow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: -1;
 }
 
-.cta-button:active {
-    transform: scale(0.98);
+/* 2. THE SYSTEM BLOCK (Stationary Text Boxes) */
+.system-block {
+    background: rgba(15, 15, 15, 0.9); /* Deep dark gray */
+    border: 1px solid rgba(195, 32, 50, 0.4); /* Subtle red border */
+    padding: 40px;
+    margin: 20px auto;
+    max-width: 900px;
+    border-radius: 2px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* 3. PARALLAX SETTINGS (For Tiles, Buttons, Images) */
+.parallax-element {
+    will-change: transform;
+    display: inline-block;
+}
+
+/* Ensure the grid is visible by making sections transparent */
+section {
+    background: transparent !important;
 }
 
 
@@ -1251,8 +1147,6 @@ footer {
     .logo img { height: 50px; }
     .dropbtn { padding: 0 10px; }
     
-    /* Ensure background stays dark */
-    .angled-header { background-color: rgba(10, 10, 10, 0.95) !important; }
 
     #image-and-links {
         justify-content: center;
@@ -1264,18 +1158,6 @@ footer {
 
     .right {
         text-align: center;
-    }
-
-    .angle-normal {
-        clip-path: none;
-    }
-
-    .angle-reverse {
-        clip-path: none;
-    }
-
-    .angle-normal-bottom {
-        clip-path: none;
     }
 
     .angle-reverse-bottom {
