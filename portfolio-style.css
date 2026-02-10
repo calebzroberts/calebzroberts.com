@@ -30,9 +30,9 @@ body {
     background-image: 
         linear-gradient(rgba(195, 32, 50, 0.25) 1px, transparent 1px),
         linear-gradient(90deg, rgba(195, 32, 50, 0.25) 1px, transparent 1px);
-    background-size: 60px 60px;
+    background-size: 80px 80px;
     /* Increased duration to 30s for a calmer, smoother crawl */
-    animation: gridScroll 30s linear infinite;
+    animation: gridScroll 20s linear infinite;
 }
 
 body::before {
