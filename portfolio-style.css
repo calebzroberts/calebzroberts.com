@@ -672,7 +672,7 @@ nav ul {
 }
 
 .cta-terminal.secondary:hover {
-    background: none;
+    background: var(--dark-bg);
 }
 
 .cta-terminal.secondary .btn-code{
