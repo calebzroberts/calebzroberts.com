@@ -22,9 +22,6 @@ body {
     font-family: var(--font-body);
     font-size: 18px; 
     line-height: 1.7;
-
-    /*grid bg*/
-    background-color: #050505;
     
     /* Smooth Scrolling Grid */
     background-image: 
@@ -59,7 +56,7 @@ body::before {
 
 @keyframes gridScroll {
     from { background-position: 0 0; }
-    to { background-position: 120px 120px; } /* Doubled to keep it proportional to larger grid size */
+    to { background-position: 80px 80px; } /* Doubled to keep it proportional to larger grid size */
 }
 
 
@@ -358,10 +355,20 @@ nav ul {
     font-family: 'Courier New', Courier, monospace;
 }
 
+.mobile-menu ul {
+    list-style: "> ";
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
 .mobile-menu a {
     color: white;
     text-transform: uppercase;
     letter-spacing: 2px;
+    font-size: 1.5rem;
 }
 
 .mobile-menu li:not(:last-child) {
@@ -372,7 +379,7 @@ nav ul {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  font-size: 2rem;
+  font-size: 3rem;
   background: none;
   border: none;
   color: white;
@@ -475,24 +482,59 @@ nav ul {
 
 /*Home Specific Styling-------------------------------------------------------*/
 
-/* Skill Section Container */
-.skillsSection {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+/* Container for the tiles */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     gap: 20px;
-    padding: 40px 0;
+    margin-top: 40px;
 }
 
 .skillTile {
-    background: #1a1a1a; /* Dark background */
+    background: #1a1a1a;
     border: 1px solid #333;
-    padding: 30px;
-    width: 200px;
-    text-align: center;
+    padding: 20px;
     transition: all 0.4s ease;
-    position: relative;
-    overflow: hidden;
+}
+
+/* Corner Accent */
+.skillTile::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #C32032;
+    border-left: 2px solid #C32032;
+}
+
+.skillTile img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 15px;
+    filter: grayscale(1) brightness(1.5);
+    transition: all 0.3s ease;
+}
+
+.skillTile p {
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+    margin: 0;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+/* Hover Effects */
+.skillTile:hover {
+    border-color: #C32032;
+    background: #222;
+    transform: translateY(-5px);
+}
+
+.skillTile:hover img {
+    filter: grayscale(0) brightness(1);
 }
 
 /* System Blades for Projects */
@@ -555,73 +597,6 @@ nav ul {
     transform: translateX(5px);
 }
 
-/* Container for the tiles */
-.skills-grid {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    flex-wrap: wrap; /* This allows them to wrap to the next line on mobile */
-    gap: 20px;
-    padding: 15px 0;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.skillTile {
-    background: #1a1a1a;
-    border: 1px solid #333;
-    padding: 30px;
-    flex: 1 1 200px; /* Grow, Shrink, and try to stay at 200px */
-    max-width: 250px; /* Don't get too wide on desktop */
-    text-align: center;
-    transition: all 0.4s ease;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-/* Corner Accent */
-.skillTile::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 10px;
-    height: 10px;
-    border-top: 2px solid #C32032;
-    border-left: 2px solid #C32032;
-}
-
-.skillTile img {
-    width: 50px;
-    height: auto;
-    margin-bottom: 15px;
-    filter: grayscale(1) brightness(1.5);
-    transition: all 0.3s ease;
-}
-
-.skillTile p {
-    color: #fff;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 0.9rem;
-    margin: 0;
-    line-height: 1.2;
-    text-transform: uppercase;
-}
-
-/* Hover Effects */
-.skillTile:hover {
-    border-color: #C32032;
-    background: #222;
-    transform: translateY(-5px);
-}
-
-.skillTile:hover img {
-    filter: grayscale(0) brightness(1);
-}
 
 
 /*button group*/
@@ -686,7 +661,6 @@ nav ul {
 
 
 /*New styling---------------------------------*/
-/* Update these in your CSS */
 
 /* Ensure the background layers stay fixed behind everything */
 .grid-background, .mouse-glow {
@@ -721,37 +695,76 @@ nav ul {
 
 /*Work experience page styling--------------------------------------------*/
 .blank-hero-section {
-    margin-top: 15rem;
+    margin-top: 12rem;
     text-align: center;
 }
 
 .blank-hero-section h1 {
-    display: flex;
-    justify-content: center;
-    color:#C32032;
+    color: #C32032;
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
 }
 
+/* Container width aligned with homepage */
 #experienceTilesColumn {
-    margin: 15%;
+    max-width: 1200px;
+    margin: 0 auto 8rem auto;
+    padding: 0 3rem;
 }
 
+/* Each experience row */
 .experienceTile {
     display: flex;
-    align-items: center;
-    margin: 3% 0;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 3rem;
+    margin-bottom: 6rem;
 }
 
+/* Alternating layout */
+.experienceTile:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+/* Logo styling */
 .experienceTile img {
-    width:30%;
-    height: 100%;
-    margin: 2%;
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    flex-shrink: 0;
+    align-self: center;
 }
 
+/* Info block styling (matches homepage dark theme) */
 .experienceInfoBlock {
-    padding: 5%;
-    border-radius: 50px;
-    
-    color:white;
+    flex: 1;
+    padding: 3rem;
+    border-radius: 30px;
+    background: rgba(15, 15, 15, 0.85);
+    border: 1px solid #2a2a2a;
+    backdrop-filter: blur(8px);
+}
+
+/* Typography */
+.experienceInfoBlock h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.job-meta {
+    font-size: 1rem;
+    color: #C32032;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.5px;
+}
+
+.experienceInfoBlock ul {
+    padding-left: 1.2rem;
+}
+
+.experienceInfoBlock li {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
 }
 
 
@@ -1440,10 +1453,8 @@ footer {
         margin-top: 15px;
     }
 
-    .skillTile {
-        /* On phones, show 1 per row */
-        flex: 1 1 100%;
-        padding: 20px;
+    .skills-grid {
+        grid-template-columns: 1fr; /* Stack skill tiles vertically */
     }
     
     .skillTile img {
@@ -1455,16 +1466,6 @@ footer {
 
     .hero-left {
         padding: 1rem;
-    }
-
-    .skillsSectionRow {
-        flex-direction: column;
-        align-items: center;
-        width:100%;
-    }
-
-    .skillTile {
-        width: 70%;    
     }
 
     .socials-button img {

@@ -125,65 +125,28 @@
                     <h2>Technical Skills</h2>
                     <div class="skills-grid">
                         <div class="skillTile parallax-element">
-                            <img src="images/Home/problem-solving-icon.png" alt="light-bulb icon">
-                            <p>C#</p>
+                            <img src="images/Home/system-integration-white.png" alt="light-bulb icon">
+                            <p>Systems Integration</p>
                         </div>
 
                         <div class="skillTile parallax-element">
-                            <img src="images/Home/communication-icon.png" alt="speech bubbles icon">
-                            <p>JavaScript</p>
-                        </div>
-
-                        <div class="skillTile parallax-element">
-                            <img src="images/Home/tech-skills-icon.png" alt="computer icon">
-                            <p>HTML5/CSS3</p>
-                        </div>
-
-                        <div class="skillTile parallax-element">
-                            <img src="images/Home/work-ethic-icon.png" alt="work ethic briefcase icon">
-                            <p>Unity Engine</p>
-                        </div>
-                    </div>
-                    <div class="skills-grid">
-                        <div class="skillTile parallax-element">
-                            <img src="images/Home/problem-solving-icon.png" alt="light-bulb icon">
+                            <img src="images/Home/diagnostic-white.png" alt="hardware diagnostics icon">
                             <p>Hardware Diagnostics</p>
                         </div>
 
                         <div class="skillTile parallax-element">
-                            <img src="images/Home/communication-icon.png" alt="speech bubbles icon">
-                            <p>Version Control (Git)</p>
+                            <img src="images/Home/bug-white.png" alt="software troubleshooting icon">
+                            <p>Software Troubleshooting</p>
                         </div>
 
                         <div class="skillTile parallax-element">
-                            <img src="images/Home/tech-skills-icon.png" alt="computer icon">
-                            <p>CMS Management</p>
+                            <img src="images/Home/web-development-white.png" alt="embedded programming icon">
+                            <p>Embedded and Low-Level Programming</p>
                         </div>
 
                         <div class="skillTile parallax-element">
-                            <img src="images/Home/work-ethic-icon.png" alt="work ethic briefcase icon">
-                            <p>Technical Troubleshooting</p>
-                        </div>
-                    </div>
-                    <div class="skills-grid">
-                        <div class="skillTile parallax-element">
-                            <img src="images/Home/problem-solving-icon.png" alt="light-bulb icon">
-                            <p>Agile Problem Solving</p>
-                        </div>
-
-                        <div class="skillTile parallax-element">
-                            <img src="images/Home/communication-icon.png" alt="speech bubbles icon">
-                            <p>Technical Communication</p>
-                        </div>
-
-                        <div class="skillTile parallax-element">
-                            <img src="images/Home/tech-skills-icon.png" alt="computer icon">
-                            <p>Client Relations</p>
-                        </div>
-
-                        <div class="skillTile parallax-element">
-                            <img src="images/Home/work-ethic-icon.png" alt="work ethic briefcase icon">
-                            <p>Work Ethic</p>
+                            <img src="images/Home/sitemap-white.png" alt="automation and version control icon">
+                            <p>Automation & Version Control</p>
                         </div>
                     </div>
                 </div>
@@ -301,52 +264,49 @@
 
             <div class="footer-bottom">
                 <p>&copy; 2026 Caleb Roberts // STATUS: ONLINE</p>
+                <a href="https://www.flaticon.com/free-icons/system" target="_blank" title="system icons">System icons created by Design Circle - Flaticon</a>
             </div>
         </footer>
         
         <script src="javascript/mobile-menu.js"></script>
 
         <script>
-            const parallaxItems = document.querySelectorAll('.parallax-element');
+            const isMobile = window.matchMedia("(max-width: 900px)").matches;
 
-            let mouseX = 0, mouseY = 0;
-            let currentX = 0, currentY = 0;
+            if (!isMobile) {
+                const parallaxItems = document.querySelectorAll('.parallax-element');
 
-            window.addEventListener('mousemove', (e) => {
-                mouseX = e.clientX;
-                mouseY = e.clientY;
-            });
+                let mouseX = 0, mouseY = 0;
+                let currentX = 0, currentY = 0;
 
-            function updateParallax() {
-                // Smooth interpolation (Lerp)
-                currentX += (mouseX - currentX) * 0.1;
-                currentY += (mouseY - currentY) * 0.1;
-
-                // 1. Update the background glow (Global)
-                document.documentElement.style.setProperty('--mouse-x', `${currentX}px`);
-                document.documentElement.style.setProperty('--mouse-y', `${currentY}px`);
-
-                // 2. Rotate elements to "look" at mouse
-                parallaxItems.forEach(item => {
-                    const rect = item.getBoundingClientRect();
-                    
-                    // Find the center of the element
-                    const centerX = rect.left + rect.width / 2;
-                    const centerY = rect.top + rect.height / 2;
-
-                    // Calculate distance from mouse to center
-                    // We limit the rotation to a max of about 10 degrees for subtlety
-                    const rotateY = ((currentX - centerX) / window.innerWidth) * 15;
-                    const rotateX = ((currentY - centerY) / window.innerHeight) * -15;
-
-                    // Apply rotation without translation (no sliding)
-                    item.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+                window.addEventListener('mousemove', (e) => {
+                    mouseX = e.clientX;
+                    mouseY = e.clientY;
                 });
 
-                requestAnimationFrame(updateParallax);
-            }
+                function updateParallax() {
+                    currentX += (mouseX - currentX) * 0.1;
+                    currentY += (mouseY - currentY) * 0.1;
 
-            updateParallax();
+                    document.documentElement.style.setProperty('--mouse-x', `${currentX}px`);
+                    document.documentElement.style.setProperty('--mouse-y', `${currentY}px`);
+
+                    parallaxItems.forEach(item => {
+                        const rect = item.getBoundingClientRect();
+                        const centerX = rect.left + rect.width / 2;
+                        const centerY = rect.top + rect.height / 2;
+
+                        const rotateY = ((currentX - centerX) / window.innerWidth) * 15;
+                        const rotateX = ((currentY - centerY) / window.innerHeight) * -15;
+
+                        item.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+                    });
+
+                    requestAnimationFrame(updateParallax);
+                }
+
+                updateParallax();
+            }
         </script>
 
         <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script> 
