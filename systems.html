@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>   	    
+	    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-17FPNKY7BG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-17FPNKY7BG');
+</script>
+        <meta charset="utf-8">
+        <title>Web Design - Caleb's Portfolio</title>
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<link rel="stylesheet" href="portfolio-style.css">
+        <link rel="icon" type="image/x-icon" href="images/site-logo.png">
+	    <script src="https://cdn.userway.org/widget.js" data-account="BCw7PWHG0g" data-position="3"></script>
+    </head>
+
+    <body>
+
+        <header class="angled-header">
+            <a class="mobileHeaderItem" id="topLogo" href="index.html" title="home"><img src="images/site-logo.png" alt="Caleb Roberts Logo"></a>
+
+            <nav>
+              <ul>
+                <li class="navText"><a href="index.html">Home</a></li>
+                <li class="navText">
+                    <div class="dropdown">
+                        <button class="dropbtn">My Background</button>
+
+                        <div class="dropdown-content">
+                            <a href="work-experience.html" title="Work Experience Page">Work Experience</a>
+                            <a href="education.html" title="Education Page">Education</a>
+                            <a href="references.html" title="References Page">References</a>
+                        </div>
+            
+                    </div>
+                </li>
+                <li class="logo"><a class="desktopHeaderItem" href="index.html" title="home"><img src="images/site-logo.png" alt="Caleb Roberts Logo"></a></li>
+                <li class="navText">
+                    <div class="dropdown">
+                        <button class="dropbtn">My Work</button>
+
+                        <div class="dropdown-content">
+                            <a href="game-development.html" title="Game Development Page">Game Development</a>
+                            <a href="web-design.html" title="Web Design Page">Web Design</a>
+                            <a href="graphic-design.html" title="Graphic Design Page">Graphic Design</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="navText"><a href="contact.html">Contact</a></li>
+              </ul>
+            </nav>
+
+            <div class="mobile-header">
+                <a href="index.html" class="mobile-logo"><img src="images/site-logo.png" alt="Logo"></a>
+                <button id="menu-toggle" aria-label="Toggle Menu" style="color: black;">
+                  &#9776;
+                </button>
+            </div>
+              
+            <div id="mobile-menu" class="mobile-menu">
+                <button id="close-menu" aria-label="Close Menu">&times;</button>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="work-experience.html">Work Experience</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="references.html">References</a></li>
+                    <li><a href="game-development.html">Game Development</a></li>
+                    <li><a href="web-design.html">Web Design</a></li>
+                    <li><a href="graphic-design.html">Graphic Design</a></li>                    
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+        </header>
+
+
+        <article id="main">
+
+            <section class="projects-hero">
+                <div class="hero-inner">
+                    <h1>Selected Projects</h1>
+                    <p class="hero-sub">
+                        A curated timeline of product builds, experiments, and digital systems.
+                    </p>
+                </div>
+            </section>
+
+            <!-- ==========================
+                TIMELINE
+            ========================== -->
+
+            <section class="timeline-section">
+                <div class="timeline-container">
+
+                    <div class="timeline-line"></div>
+
+                    <!-- ITEM 1 -->
+                    <div class="timeline-item left">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-year">2024</span>
+                            <div class="project-summary">
+                                <h3>Portfolio Platform Redesign</h3>
+                                <p>Complete rebuild of personal brand and UX structure.</p>
+                                <button class="details-toggle">MORE DETAILS</button>
+                            </div>
+                            <div class="project-details">
+                                <div>
+                                    
+                                    <div class="details-inner">
+                                        <h4>OVERVIEW</h4>
+                                        <ul>
+                                            <li>Full UI/UX redesign</li>
+                                            <li>Custom CSS architecture</li>
+                                            <li>Responsive layout rebuild</li>
+                                            <li>Performance optimization</li>
+                                        </ul>
+                                        <p>Designed to improve clarity, hierarchy, and scalability across future projects.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 2 -->
+                    <div class="timeline-item right">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-year">2023</span>
+                            <div class="project-summary">
+                                <h3>Interactive Dashboard System</h3>
+                                <p>Data visualization interface for internal tools.</p>
+                                <button class="details-toggle">MORE DETAILS</button>
+                            </div>
+                            <div class="project-details">
+                                <div>
+                                    <div class="details-inner">
+                                        <h4>KEY FEATURES</h4>
+                                        <ul>
+                                            <li>Custom filtering logic</li>
+                                            <li>Dynamic graph rendering</li>
+                                            <li>Component-based structure</li>
+                                            <li>Mobile optimization</li>
+                                        </ul>
+                                        <p>Focused on clarity, scalability, and usability.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 3 -->
+                    <div class="timeline-item left">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-year">2022</span>
+                            <div class="project-summary">
+                                <h3>E-Commerce Prototype</h3>
+                                <p>Minimal storefront built for experimentation.</p>
+                                <button class="details-toggle">MORE DETAILS</button>
+                            </div>
+                            <div class="project-details">
+                                <div>
+                                    <div class="details-inner">
+                                        <h4>SCOPE</h4>
+                                        <ul>
+                                            <li>Product layout system</li>
+                                            <li>Checkout UI prototype</li>
+                                            <li>Dark-mode branding</li>
+                                            <li>Cart logic simulation</li>
+                                        </ul>
+                                        <p>Built to explore conversion-focused layouts and visual hierarchy.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ITEM 4 -->
+                    <div class="timeline-item right">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <span class="timeline-year">2021</span>
+                            <div class="project-summary">
+                                <h3>Landing Page Experiment Series</h3>
+                                <p>Rapid iteration of modern hero sections and layouts.</p>
+                                <button class="details-toggle">MORE DETAILS</button>
+                            </div>
+                            <div class="project-details">
+                                <div>
+                                    <div class="details-inner">
+                                        <h4>FOCUS</h4>
+                                        <ul>
+                                            <li>Typography experiments</li>
+                                            <li>Grid layout variations</li>
+                                            <li>Hero animation testing</li>
+                                            <li>Scroll behavior refinement</li>
+                                        </ul>
+                                        <p>Used to refine structure before scaling into larger projects.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item left">
+                        <div class="timeline-marker"></div>
+
+                        <div class="timeline-content">
+                            <span class="timeline-year">2024</span>
+
+                            <div class="project-summary">
+                                <h3>Brand Identity System</h3>
+                                <p>Visual system redesign including typography, layout rules, and UI components.</p>
+                                <button class="details-toggle">MORE DETAILS</button>
+                            </div>
+
+                            <div class="project-details">
+                                <div>
+                                    <div class="details-inner">
+
+                                        <h4>PROJECT OVERVIEW</h4>
+                                        <ul>
+                                            <li>Logo refinement and spacing system</li>
+                                            <li>Typography hierarchy development</li>
+                                            <li>UI component standardization</li>
+                                            <li>Responsive design testing</li>
+                                        </ul>
+
+                                        <div class="project-media">
+                                            <img src="images/brand-1.jpg" alt="Brand preview 1">
+                                            <img src="images/brand-2.jpg" alt="Brand preview 2">
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item right">
+                        <div class="timeline-marker"></div>
+
+                        <div class="timeline-content">
+                            <span class="timeline-year">2023</span>
+
+                            <div class="project-summary">
+                                <h3>Interactive Web Application</h3>
+                                <p>Custom dashboard with live filtering and data visualization components.</p>
+                                <button class="details-toggle">MORE DETAILS</button>
+                            </div>
+
+                            <div class="project-details">
+                                <div>
+                                    <div class="details-inner">
+
+                                        <h4>KEY FEATURES</h4>
+                                        <ul>
+                                            <li>Dynamic filtering logic</li>
+                                            <li>Reusable UI modules</li>
+                                            <li>Performance optimization</li>
+                                            <li>Accessibility improvements</li>
+                                        </ul>
+
+                                        <div class="project-media">
+                                            <img src="images/dashboard.jpg" alt="Dashboard preview">
+                                        </div>
+
+                                        <a href="https://example.com" target="_blank" class="project-link">
+                                            VIEW LIVE PROJECT →
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item left">
+                        <div class="timeline-marker"></div>
+
+                        <div class="timeline-content">
+                            <span class="timeline-year">2022</span>
+
+                            <div class="project-summary">
+                                <h3>Product Demo Walkthrough</h3>
+                                <p>Feature breakdown and UI interaction demonstration.</p>
+                                <button class="details-toggle">MORE DETAILS</button>
+                            </div>
+
+                            <div class="project-details">
+                                <div>
+                                    <div class="details-inner">
+
+                                        <h4>OVERVIEW</h4>
+                                        <ul>
+                                            <li>UX flow explanation</li>
+                                            <li>Interaction demonstrations</li>
+                                            <li>Performance showcase</li>
+                                        </ul>
+
+                                        <div class="project-media video">
+                                            <iframe 
+                                                src="https://www.youtube.com/embed/VIDEO_ID"
+                                                frameborder="0"
+                                                allowfullscreen>
+                                            </iframe>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item right">
+                        <div class="timeline-marker"></div>
+
+                        <div class="timeline-content">
+                            <span class="timeline-year">2021</span>
+
+                            <div class="project-summary">
+                                <h3>Motion UI Experiment</h3>
+                                <p>Micro-interactions and animation testing across layout components.</p>
+                                <button class="details-toggle">MORE DETAILS</button>
+                            </div>
+
+                            <div class="project-details">
+                                <div>
+                                    <div class="details-inner">
+
+                                        <h4>FOCUS</h4>
+                                        <ul>
+                                            <li>CSS animation refinement</li>
+                                            <li>Scroll-triggered transitions</li>
+                                            <li>Performance testing</li>
+                                        </ul>
+
+                                        <div class="project-media video">
+                                            <video controls>
+                                                <source src="videos/demo.mp4" type="video/mp4">
+                                            </video>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            
+
+        </article>
+
+        <footer>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo"><a href="index.html" title="home"><img src="images/site-logo.png" alt="Caleb Roberts Logo"></a></div>
+                    <h2 class="footer-name">Caleb Roberts</h2>
+                    <p class="footer-tagline">Systems & Software Engineer</p>
+                    
+                    <div class="footer-socials">
+                        <a href="https://www.linkedin.com/in/caleb-roberts-ba382433a/" target="_blank" title="LinkedIn Profile">
+                            <img src="images/Buttons-icons/linkedin-gray.png" alt="LinkedIn">
+                            <span>LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Sitemap</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="work-experience.html">Experience</a></li>
+                        <li><a href="contact.html">Contact Me</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Registry</h4>
+                    <p><a href="tel:+17174796042">717.479.6042</a></p>
+                    <p><a href="mailto:caleb@calebzroberts.com">caleb@calebzroberts.com</a></p>
+                    <p>Lancaster, PA</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Caleb Roberts // STATUS: ONLINE</p>
+                <a href="https://www.flaticon.com/free-icons/system" target="_blank" title="system icons">System icons created by Design Circle - Flaticon</a>
+            </div>
+        </footer>
+        
+        <script src="javascript/mobile-menu.js"></script>
+
+        <script>
+            document.querySelectorAll(".details-toggle").forEach(button => {
+                button.addEventListener("click", () => {
+                    const details = button.closest(".timeline-content").querySelector(".project-details");
+                    details.classList.toggle("active");
+                });
+            });
+        </script>
+
+
+        <script>
+            const isMobile = window.matchMedia("(max-width: 900px)").matches;
+
+            if (!isMobile) {
+                const parallaxItems = document.querySelectorAll('.parallax-element');
+
+                let mouseX = 0, mouseY = 0;
+                let currentX = 0, currentY = 0;
+
+                window.addEventListener('mousemove', (e) => {
+                    mouseX = e.clientX;
+                    mouseY = e.clientY;
+                });
+
+                function updateParallax() {
+                    currentX += (mouseX - currentX) * 0.1;
+                    currentY += (mouseY - currentY) * 0.1;
+
+                    document.documentElement.style.setProperty('--mouse-x', `${currentX}px`);
+                    document.documentElement.style.setProperty('--mouse-y', `${currentY}px`);
+
+                    parallaxItems.forEach(item => {
+                        const rect = item.getBoundingClientRect();
+                        const centerX = rect.left + rect.width / 2;
+                        const centerY = rect.top + rect.height / 2;
+
+                        const rotateY = ((currentX - centerX) / window.innerWidth) * 15;
+                        const rotateX = ((currentY - centerY) / window.innerHeight) * -15;
+
+                        item.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+                    });
+
+                    requestAnimationFrame(updateParallax);
+                }
+
+                updateParallax();
+            }
+        </script>
+
+        <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script> 
+        <script>
+            const lenis = new Lenis();
+
+            function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+            }
+
+            requestAnimationFrame(raf);
+        </script>
+
+        <script>
+            const reveals = document.querySelectorAll(".reveal");
+
+            function revealOnScroll() {
+                reveals.forEach((el) => {
+                    const windowHeight = window.innerHeight;
+                    const elementTop = el.getBoundingClientRect().top;
+
+                    if (elementTop < windowHeight - 100) {
+                        el.classList.add("active");
+                    }
+                });
+            }
+
+            window.addEventListener("scroll", revealOnScroll);
+            revealOnScroll();
+        </script>
+
+    </body>
+
+
+
+</html>

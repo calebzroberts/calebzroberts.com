@@ -168,48 +168,49 @@
 
             <div class="footer-bottom">
                 <p>&copy; 2026 Caleb Roberts // STATUS: ONLINE</p>
+                <a href="https://www.flaticon.com/free-icons/system" target="_blank" title="system icons">System icons created by Design Circle - Flaticon</a>
             </div>
         </footer>
         
         <script src="javascript/mobile-menu.js"></script>
 
         <script>
-            const hero = document.querySelector('.hero-section');
-            const headshot = document.querySelector('.hero-img');
-            
-            let targetX = 0;
-            let targetY = 0;
-            let currentX = 0;
-            let currentY = 0;
+            const isMobile = window.matchMedia("(max-width: 900px)").matches;
 
-            window.addEventListener('mousemove', (e) => {
-                targetX = e.clientX;
-                targetY = e.clientY;
-            });
+            if (!isMobile) {
+                const parallaxItems = document.querySelectorAll('.parallax-element');
 
-            function updateParallax() {
-                // Linear Interpolation (Lerp) for that "heavy" smooth feel
-                currentX += (targetX - currentX) * 0.1;
-                currentY += (targetY - currentY) * 0.1;
+                let mouseX = 0, mouseY = 0;
+                let currentX = 0, currentY = 0;
 
-                // Update Glow Position
-                hero.style.setProperty('--mouse-x', `${currentX}px`);
-                hero.style.setProperty('--mouse-y', `${currentY}px`);
+                window.addEventListener('mousemove', (e) => {
+                    mouseX = e.clientX;
+                    mouseY = e.clientY;
+                });
 
-                // Update Headshot Tilt
-                const xPercent = (currentX / window.innerWidth) - 0.5;
-                const yPercent = (currentY / window.innerHeight) - 0.5;
-                
-                const rotateX = yPercent * -15; // Slightly reduced for professionalism
-                const rotateY = xPercent * 15;
-                
-                headshot.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+                function updateParallax() {
+                    currentX += (mouseX - currentX) * 0.1;
+                    currentY += (mouseY - currentY) * 0.1;
 
-                requestAnimationFrame(updateParallax);
+                    document.documentElement.style.setProperty('--mouse-x', `${currentX}px`);
+                    document.documentElement.style.setProperty('--mouse-y', `${currentY}px`);
+
+                    parallaxItems.forEach(item => {
+                        const rect = item.getBoundingClientRect();
+                        const centerX = rect.left + rect.width / 2;
+                        const centerY = rect.top + rect.height / 2;
+
+                        const rotateY = ((currentX - centerX) / window.innerWidth) * 15;
+                        const rotateX = ((currentY - centerY) / window.innerHeight) * -15;
+
+                        item.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+                    });
+
+                    requestAnimationFrame(updateParallax);
+                }
+
+                updateParallax();
             }
-
-            // Start the animation loop
-            updateParallax();
         </script>
 
         <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script> 
@@ -222,6 +223,24 @@
             }
 
             requestAnimationFrame(raf);
+        </script>
+
+        <script>
+            const reveals = document.querySelectorAll(".reveal");
+
+            function revealOnScroll() {
+                reveals.forEach((el) => {
+                    const windowHeight = window.innerHeight;
+                    const elementTop = el.getBoundingClientRect().top;
+
+                    if (elementTop < windowHeight - 100) {
+                        el.classList.add("active");
+                    }
+                });
+            }
+
+            window.addEventListener("scroll", revealOnScroll);
+            revealOnScroll();
         </script>
 
     </body>

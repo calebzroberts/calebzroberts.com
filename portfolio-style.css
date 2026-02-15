@@ -709,7 +709,7 @@ nav ul {
 .dashboard-card {
     background: #111;
     padding: 35px;
-    border-radius: 16px;
+    border-radius: 3px;
     border: 1px solid rgba(255,255,255,0.05);
     box-shadow: 0 20px 60px rgba(0,0,0,0.4);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -778,7 +778,7 @@ nav ul {
 .referenceTile {
     background: #111;
     border: 1px solid rgba(255,255,255,0.05);
-    border-radius: 16px;
+    border-radius: 3px;
     padding: 35px;
     box-shadow: 0 20px 60px rgba(0,0,0,0.4);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -952,6 +952,8 @@ nav ul {
 .form-group input::placeholder,
 .form-group textarea::placeholder {
   color: rgba(255,255,255,0.4);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
 }
 
 
@@ -970,14 +972,16 @@ nav ul {
   background: #C32032;
   color: white;
   border: none;
-  border-radius: 4px;
-  transition: all .25s ease;
+  border: 1px solid transparent;
+  transition: all .4s ease;
 }
 
 
 .form-submit button:hover {
-  background: #ffffff;
-  color: #C32032;
+  background: transparent;
+  color: var(--main-red);
+  border: 1px solid var(--main-red);
+  cursor: pointer;
 }
 
 
@@ -1121,6 +1125,8 @@ iframe {
 
 
 
+
+
 /*Graphic design--------------------------------------------------------*/
 .graphics-grid {
     display: flex;
@@ -1131,6 +1137,242 @@ iframe {
     width: 30%;
     height: 100%;
     margin: 1%;
+}
+
+
+
+/*Projects page styling---------------------------------------------------*/
+/* ==========================
+   HERO
+========================== */
+
+.projects-hero {
+    padding: 140px 0 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+}
+
+.hero-inner {
+    max-width: 900px;
+    width: 100%;
+}
+
+.projects-hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-sub {
+    font-size: 1.4rem;
+    opacity: 0.7;
+    max-width: 700px;
+}
+
+/* ==========================
+   TIMELINE SECTION
+========================== */
+
+.timeline-section {
+    padding: 100px 0 140px;
+    position: relative;
+}
+
+.timeline-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Center vertical line */
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: #222;
+    transform: translateX(-50%);
+}
+
+/* Timeline item wrapper */
+.timeline-item {
+    position: relative;
+    width: 100%;
+    margin-bottom: 80px;
+}
+
+/* Left side */
+.timeline-item.left .timeline-content {
+    width: 46%;
+    margin-right: auto;
+    text-align: right;
+}
+
+/* Right side */
+.timeline-item.right .timeline-content {
+    width: 46%;
+    margin-left: auto;
+    text-align: left;
+}
+
+/* Marker */
+.timeline-marker {
+    position: absolute;
+    left: 50%;
+    top: 40px;
+    width: 16px;
+    height: 16px;
+    background: var(--main-red);
+    border: 1px solid var(--dark-bg);
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+/* Year positioned opposite side of card */
+
+.timeline-year {
+    position: absolute;
+    top:30px;
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    opacity: 0.4;
+    white-space: nowrap;
+}
+
+/* If card is on left, year goes right of center line */
+.timeline-item.left .timeline-year {
+    left: calc(50% + 30px);
+    text-align: left;
+}
+
+/* If card is on right, year goes left of center line */
+.timeline-item.right .timeline-year {
+    right: calc(50% + 30px);
+    text-align: right;
+}
+
+
+/* Card styling */
+.project-summary {
+    border: 1px solid #1a1a1a;
+    padding: 2.5rem;
+    background: #111;
+    transition: transform 0.2s ease, border 0.2s ease;
+}
+
+.project-summary:hover {
+    transform: translateY(-4px);
+    border-color: #333;
+}
+
+.project-summary h3 {
+    font-size: 1.9rem;
+    margin-bottom: 0.8rem;
+}
+
+.project-summary p {
+    font-size: 1rem;
+    margin-bottom: 1.8rem;
+    opacity: 0.6;
+}
+
+/* Button styling */
+.details-toggle {
+    background: transparent;
+    border: 1px solid #333;
+    padding: 10px 22px;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    color: #fff;
+}
+
+.details-toggle:hover {
+    background: #fff;
+    color: #000;
+    border-color: #fff;
+}
+
+/* ==========================
+   EXPANDABLE PANEL (SMOOTH)
+========================== */
+
+.project-details {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.35s ease;
+}
+
+.project-details > div {
+    overflow: hidden;
+}
+
+.project-details.active {
+    grid-template-rows: 1fr;
+}
+
+.details-inner {
+    border: 1px solid #1a1a1a;
+    padding: 2.5rem;
+    margin-top: 20px;
+    background: #0e0e0e;
+}
+
+.details-inner h4 {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    opacity: 0.7;
+}
+
+.details-inner li {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+/* ==========================
+   PROJECT MEDIA
+========================== */
+
+.project-media {
+    margin-top: 2rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.project-media img {
+    width: 100%;
+    display: block;
+    border: 1px solid #1a1a1a;
+}
+
+.project-media.video iframe,
+.project-media.video video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 1px solid #1a1a1a;
+}
+
+/* External project link */
+
+.project-link {
+    display: inline-block;
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-decoration: none;
+    border-bottom: 1px solid #333;
+    padding-bottom: 4px;
+    transition: all 0.2s ease;
+    color:white;
+}
+
+.project-link:hover {
+    border-color: #fff;
 }
 
 
