@@ -856,7 +856,7 @@ nav ul {
     border-radius: 50px;
     background: rgba(195, 32, 50, 0.15);
     color: #C32032;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     text-decoration: none;
     border: 1px solid transparent;
     transition: all 0.3s ease;
@@ -869,8 +869,8 @@ nav ul {
 }
 
 .reference-actions img {
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
 }
 
 
@@ -1019,8 +1019,8 @@ nav ul {
 }
 
 .contactTile img {
-    width: 34px;
-    height: 34px;
+    width:44px;
+    height: 44px;
 }
 
 
@@ -1147,7 +1147,7 @@ iframe {
 ========================== */
 
 .projects-hero {
-    padding: 140px 0 120px;
+    padding: 140px 2rem 120px 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1155,7 +1155,7 @@ iframe {
 }
 
 .hero-inner {
-    max-width: 900px;
+    max-width: 1000px;
     width: 100%;
 }
 
@@ -1193,7 +1193,7 @@ iframe {
     top: 0;
     bottom: 0;
     width: 1px;
-    background: #222;
+    background: #a8a8a8;
     transform: translateX(-50%);
 }
 
@@ -1208,7 +1208,7 @@ iframe {
 .timeline-item.left .timeline-content {
     width: 46%;
     margin-right: auto;
-    text-align: right;
+    text-align: left;
 }
 
 /* Right side */
@@ -1240,6 +1240,7 @@ iframe {
     letter-spacing: 3px;
     opacity: 0.4;
     white-space: nowrap;
+    color:white;
 }
 
 /* If card is on left, year goes right of center line */
@@ -1270,7 +1271,7 @@ iframe {
 
 .project-summary h3 {
     font-size: 1.9rem;
-    margin-bottom: 0.8rem;
+    margin: 0 0 0.8rem 0;
 }
 
 .project-summary p {
@@ -1281,7 +1282,7 @@ iframe {
 
 /* Button styling */
 .details-toggle {
-    background: transparent;
+    background: rgba(195, 32, 50, 0.5);
     border: 1px solid #333;
     padding: 10px 22px;
     font-size: 0.75rem;
@@ -1321,6 +1322,24 @@ iframe {
     margin-top: 20px;
     background: #0e0e0e;
 }
+
+/* Fix bullet alignment inside timeline cards */
+
+.details-inner ul {
+    text-align: left;
+    padding-left: 1.2rem;
+    margin-left: 0;
+    list-style-position: outside;
+}
+
+.timeline-item.left .details-inner ul {
+    margin-right: auto;
+}
+
+.timeline-item.right .details-inner ul {
+    margin-left: 0;
+}
+
 
 .details-inner h4 {
     font-size: 0.85rem;
@@ -1509,9 +1528,314 @@ footer {
 }
 
 
+/* =====================================================
+   RESPONSIVE MEDIA QUERIES
+===================================================== */
+
+/* =========================
+   LARGE SCREENS TIGHTENING
+========================= */
+@media (max-width: 1200px) {
+
+  .hero-section {
+    padding: 0 6%;
+  }
+
+  .projects-hero h1 {
+    font-size: 3.2rem;
+  }
+
+  .timeline-item.left .timeline-content,
+  .timeline-item.right .timeline-content {
+    width: 48%;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 40px;
+  }
+}
 
 
-@media screen and (max-width: 1400px) {
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 992px) {
+
+  body {
+    font-size: 16px;
+  }
+
+  /* Hero */
+  .hero-section {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 5% 60px;
+    height: auto;
+  }
+
+  .hero-left {
+    padding: 0;
+  }
+
+  .hero-left h1 {
+    font-size: 4rem;
+  }
+
+  .hero-left h2 {
+    justify-content: center;
+    margin-left: 0;
+    font-size: 1.2rem;
+  }
+
+  .hero-img {
+    /* max-height: 40vh;
+    margin-top: 40px; */
+    display: none;
+  }
+
+  .hero-section .button-group {
+    justify-content: center;
+  }
+
+  .projects-hero {
+    padding-bottom: 10px;
+  }
+
+  /* Skills */
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+
+    .timeline-container {
+    padding-left: 50px;
+  }
+
+  /* Move vertical line to left */
+  .timeline-line {
+    left: 20px;
+    transform: none;
+  }
+
+  /* Remove alternating layout */
+  .timeline-item {
+    margin: 0 0 60px 0;
+  }
+
+  .timeline-item.left .timeline-content,
+  .timeline-item.right .timeline-content {
+    width: 100%;
+    margin: 0;
+  }
+
+  /* Properly align marker with line */
+  .timeline-marker {
+    left: 20px;
+    transform: translateX(-50%);
+  }
+
+  /* Year becomes normal block text */
+  .timeline-year {
+    position: relative;
+    left: 0 !important;
+    right: 0 !important;
+    top: 0;
+    margin-bottom: 10px;
+    text-align: left !important;
+    opacity: 0.5;
+  }
+
+  /* References */
+  #referenceTiles {
+    grid-template-columns: 1fr;
+  }
+
+  /* Contact details */
+  #contactDetailsSection {
+    grid-template-columns: 1fr;
+  }
+
+  .contactTile {
+    border-right: none;
+    border-bottom: 1px solid #2a2a2a;
+  }
+
+  .contactTile:last-child {
+    border-bottom: none;
+  }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+
+  /* Disable animated grid for performance */
+  body {
+    animation: none;
+    background-size: 60px 60px;
+  }
+
+  /* Header swap */
+  header nav {
+    display: none;
+  }
+
+  .mobile-header {
+    display: flex;
+  }
+
+  /* Section padding */
+  .angled-section {
+    padding: 1.5rem 1.5rem 3rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h3 {
+    font-size: 32px;
+    margin: 20px 0;
+  }
+
+  .project-summary h3 {
+    font-size: 1.6rem;
+  }
+
+  h4 {
+    font-size: 24px;
+  }
+
+  /* Systems blades stack tighter */
+  .system-blade {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .blade-index {
+    margin: 0 0 10px 0;
+  }
+
+  .blade-arrow {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+
+  /* Forms */
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .contact-form {
+    padding: 2rem;
+  }
+
+  /* Two columns collapse */
+  .twoColumns {
+    flex-direction: column;
+  }
+
+  .twoColumns img {
+    width: 100%;
+    padding: 1rem 0;
+  }
+
+  /* Game tiles full width */
+  .gameTile {
+    width: 100%;
+    margin: 10% 0;
+  }
+
+  /* Image grids */
+  .imageGrid img {
+    width: 100%;
+    margin: 3% 0;
+  }
+
+  .graphics-grid img {
+    width: 48%;
+  }
+
+  /* Dashboard cards */
+  #experienceTilesColumn {
+    padding: 80px 20px;
+  }
+
+  .dashboard-card {
+    padding: 25px;
+  }
+
+  /* Footer stacks */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .footer-brand {
+    align-items: center;
+    text-align: center;
+  }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+@media (max-width: 480px) {
+
+  body {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .projects-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-sub {
+    font-size: 1rem;
+  }
+
+  .cta-terminal {
+    padding: 12px 18px;
+    font-size: 0.8rem;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .graphics-grid img {
+    width: 100%;
+  }
+
+  .skillTile img {
+    width: 60px;
+  }
+
+}
+
+
+
+
+/* @media screen and (max-width: 1400px) {
     #image-and-links {
         justify-content: flex-start;
     }
@@ -1555,7 +1879,6 @@ footer {
     
         padding: 5rem;
         position: relative;
-        /* top slant: 5% down; bottom slant: 5% up */
     }
 
     .cta-button {
@@ -1587,7 +1910,6 @@ footer {
     }
 
     .skillTile {
-        /* On tablets, show 2 per row */
         flex: 1 1 calc(45% - 20px); 
         max-width: none;
     }
@@ -1707,7 +2029,6 @@ footer {
     }
 }
 
-/* Responsive fix for center alignment on mobile */
 @media (max-width: 768px) {
     .footer-brand {
         align-items: center;
@@ -1763,9 +2084,9 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
-    nav { display: none; } /* Hide desktop nav */
+    nav { display: none; }
     
-    .mobile-header { display: flex; } /* Show mobile bar */
+    .mobile-header { display: flex; }
     
     #topLogo, .desktopHeaderItem { display: none; }
 
@@ -1804,7 +2125,7 @@ footer {
     }
 
     .skills-grid {
-        grid-template-columns: 1fr; /* Stack skill tiles vertically */
+        grid-template-columns: 1fr; 
     }
     
     .skillTile img {
@@ -1821,4 +2142,4 @@ footer {
     .socials-button img {
         width: 5rem;
     }
-}
+} */

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>   
+    <head>
 	    <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-17FPNKY7BG"></script>
 <script>
@@ -12,7 +12,7 @@
   gtag('config', 'G-17FPNKY7BG');
 </script>
         <meta charset="utf-8">
-        <title>Caleb's Portfolio</title>
+        <title>Contact Me - Caleb's Portfolio</title>
     	<meta name="viewport" content="width=device-width, initial-scale=1">
     	<link rel="stylesheet" href="/portfolio-style.css">
         <link rel="icon" type="image/x-icon" href="/images/site-logo.png">
@@ -81,149 +81,93 @@
 
         <article id="main">
 
-            <section class="hero-section">
-                <div class="hero-left">
-                    <div class="system-status"><span>STATUS: ACTIVE // SOFTWARE ENGINEERING STUDENT</span></div>
-                    <h1>Caleb Roberts</h1>
-                    <h2>Systems & Software Engineer</h2>
-                    <p class="hero-sub">Bridging the gap between creative design and technical execution through clean code and hardware diagnostics.</p>
-                    
-                    <div class="button-group">
-                        <a href="#projects" class="cta-terminal secondary parallax-element">
-                            <span class="btn-code">01</span> Explore My Work
-                        </a>
-                        <a href="/work-experience/" class="cta-terminal secondary parallax-element">
-                            <span class="btn-code">02</span> Technical Resume
-                        </a>
-                    </div>
-                </div>
-                <div class="hero-right">
-                    
-                    <img src="/images/Home/headshot.jpeg" alt="Caleb Roberts" class="hero-img parallax-element">
-                </div>
+            <section class="blank-hero-section">
+                <h1>Contact Me</h1>
             </section>
 
-            <section class="angled-section">
+            <section class="angled-section red-section angle-normal" id="contactForm" style="z-index: 1;">
                 <div class="content center">
-                    <h2>Engineering the Future</h2>
-                    <p class="system-block">
-                        I am a first year software engineering student at Thaddeus Stevens 
-                        College of Technology also working in web development and hardware support. 
-                        In my work as a Support Specialist at Launch Kits, I maintain and update 
-                        live client websites by implementing content and widget changes and resolving 
-                        frontend and backend technical issues.
-                        In addition to this, I work as a Consultation Agent at Geek Squad.
-                        Between these two roles and my studying at Thaddeus Stevens, I have 
-                        learned how to tackle each software and hardware issue with a thorough 
-                        diagnostic approach.
+                    <h2>Let's Get In Touch</h2>
+                    <p>
+                        Fill out the form below to send me a message and I will get back to you as soon as I can. I look forward to hearing from you!
                     </p>
+                    <form class="contact-form" action="https://formsubmit.co/4e79b59c1cc6c1eedf3b34e940c6e16e" method="POST">
+                        <div class="form-row">
+                          <div class="form-group">
+                            <label for="first-name">First Name</label>
+                            <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
+                          </div>
+                          <div class="form-group">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+                          </div>
+                        </div>
+                      
+                        <div class="form-group">
+                          <label for="email">Email</label>
+                          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                        </div>
+                      
+                        <div class="form-group">
+                          <label for="message">Message</label>
+                          <textarea id="message" name="message" placeholder="Your message..." rows="5" required></textarea>
+                        </div>
+                      
+                        <div class="form-submit">
+                          <button type="submit" class="cta-button gray-button">Submit</button>
+                        </div>
+                      </form>
+                      
                 </div>
             </section>
 
-            <section class="angled-section">
+            <section class="white-section angled-section angle-reverse" style="z-index: 2;">
                 <div class="content center">
-                    <h2>Technical Skills</h2>
-                    <div class="skills-grid">
-                        <div class="skillTile parallax-element">
-                            <img src="/images/Home/system-integration-white.png" alt="light-bulb icon">
-                            <p>Systems Integration</p>
-                        </div>
+                    <h2>Contact Me Directly</h2>
+                    <div id="contactDetailsSection">
+                        <a class="contactTile" href="tel:+17174796042">
+                            <img src="/images/Buttons-icons/phone-white.png" alt="phone icon">
 
-                        <div class="skillTile parallax-element">
-                            <img src="/images/Home/diagnostic-white.png" alt="hardware diagnostics icon">
-                            <p>Hardware Diagnostics</p>
-                        </div>
-
-                        <div class="skillTile parallax-element">
-                            <img src="/images/Home/bug-white.png" alt="software troubleshooting icon">
-                            <p>Software Troubleshooting</p>
-                        </div>
-
-                        <div class="skillTile parallax-element">
-                            <img src="/images/Home/web-development-white.png" alt="embedded programming icon">
-                            <p>Embedded and Low-Level Programming</p>
-                        </div>
-
-                        <div class="skillTile parallax-element">
-                            <img src="/images/Home/sitemap-white.png" alt="automation and version control icon">
-                            <p>Automation & Version Control</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="angled-section" id="projects">
-                <div class="content center">
-                    <h2>Project Registry</h2>
-                    <div class="systems-container">
-                        <a class="system-blade" href="/systems/">
-                            <div class="blade-index">01</div>
-                            <div class="blade-content">
-                                <h4>Hardware Projects</h4>
-                                <p>Hardware Integration, Diagnostics, and Physical Troubleshooting</p>
+                            <div class="buttonText">
+                                <p class="contactButtonHeader">Phone</p>
+                                <p>(717)-479-6042</p>
                             </div>
-                            <div class="blade-arrow">&rarr;</div>
                         </a>
 
-                        <a class="system-blade" href="/software/">
-                            <div class="blade-index">02</div>
-                            <div class="blade-content">
-                                <h4>Software Projects</h4>
-                                <p>Web Systems, Logic-Heavy Development, and Internal Tooling</p>
-                            </div>
-                            <div class="blade-arrow">&rarr;</div>
-                        </a>
+                        <a class="contactTile" href="mailto:caleb@calebzroberts.com">
+                            <img src="/images/Buttons-icons/envelope-white.png" alt="envelope icon">
 
-                        <a class="system-blade" href="/interactive/">
-                            <div class="blade-index">03</div>
-                            <div class="blade-content">
-                                <h4>Video Game Projects</h4>
-                                <p>Physics Engines, C# Control Logic, and Systems Architecture</p>
+                            <div class="buttonText">
+                                <p class="contactButtonHeader">Email</p>
+                                <p>caleb@calebzroberts.com</p>
                             </div>
-                            <div class="blade-arrow">&rarr;</div>
                         </a>
                     </div>
                 </div>
             </section>
 
-            <section class="angled-section">
+            <section class="angled-section gray-section angle-normal" style="z-index: 3;">
                 <div class="content center">
-                    <h2>Professional Background</h2>
+                    <h2>Location</h2>
+                    <p>I am based in Lancaster, PA</p>
 
-                    <p class="system-block">
-                        I have experience in both software and hardware support between my work
-                        with client hardware and software issues at Geek Squad, my website support 
-                        work at Launch Kits, and my work developing 3d environments in Unity. In addition
-                        to my experience in these roles, I am studying software engineering at 
-                        Thaddeus Stevens and studied at the Lancaster County CTC. Both of these 
-                        helped me learn to approach problems from both a high-level systems perspective
-                        and a low-level technical perspective.
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55173.564194381506!2d-76.3779789507808!3d40.039892557101744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6248b917214b9%3A0xb46790d030dbd2d6!2sLancaster%2C%20PA!5e1!3m2!1sen!2sus!4v1747744244976!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </section>
+
+            <section class="angled-section angle-reverse red-section" style="z-index: 4;">
+                <div class="content center">
+                    <h2>Social Media</h2>
+                    <p>
+                        Connect with me professionally on LinkedIn.
                     </p>
 
-                    <div class="button-group">
-                        <a href="/work-experience/" class="cta-terminal parallax-element">
-                            View Work Experience
-                        </a>
-                        <a href="/education/" class="cta-terminal parallax-element">
-                            View Education
+                    <div class="socials-group">
+                        
+                        <a href="https://www.linkedin.com/in/caleb-roberts-ba382433a/" target="_blank" class="socials-button">
+                            <img src="/images/Buttons-icons/linkedin-white.png" alt="linkedin icon">
                         </a>
                     </div>
-                </div>
-            </section>
-
-            <section class="angled-section">
-                <div class="content center">
-                    <h2>Get In Touch</h2>
-                    <p class="system-block">
-                        Thank you for reviewing my work. If you have questions about my experience 
-                        or would like to discuss a potential role, please reach out below.
-                    </p>
-                    <div class="button-group">
-                        <a href="/contact/" class="cta-terminal parallax-element">
-                            Contact Me
-                        </a>
-                    </div>
-                    
                 </div>
             </section>
             
@@ -320,9 +264,27 @@
 
             requestAnimationFrame(raf);
         </script>
+
+        <script>
+            const reveals = document.querySelectorAll(".reveal");
+
+            function revealOnScroll() {
+                reveals.forEach((el) => {
+                    const windowHeight = window.innerHeight;
+                    const elementTop = el.getBoundingClientRect().top;
+
+                    if (elementTop < windowHeight - 100) {
+                        el.classList.add("active");
+                    }
+                });
+            }
+
+            window.addEventListener("scroll", revealOnScroll);
+            revealOnScroll();
+        </script>
+
     </body>
 
-    
 
 
 </html>
