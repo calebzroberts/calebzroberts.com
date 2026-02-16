@@ -1777,6 +1777,10 @@ footer {
     padding: 25px;
   }
 
+  .dashboard-card h3 {
+    font-size: 1.8rem;
+  }
+
   /* Footer stacks */
   .footer-grid {
     grid-template-columns: 1fr;
