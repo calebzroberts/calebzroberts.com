@@ -1,0 +1,2 @@
+User-agent: *
+Disallow: /parm-co-site/
