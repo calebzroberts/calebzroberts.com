@@ -614,6 +614,19 @@ nav ul {
     margin-top: 30px;
 }
 
+.compact-nav {
+    margin-top: 0;
+    margin-bottom: 20px;
+    gap: 12px;
+    justify-content: flex-start;
+}
+
+.compact-nav .cta-terminal {
+    padding: 10px 18px;
+    font-size: 0.74rem;
+    letter-spacing: 1px;
+}
+
 .hero-section .button-group {
     justify-content: flex-start;
 }
@@ -701,8 +714,8 @@ nav ul {
     display: flex;
     flex-direction: column;
     gap: 40px;
-    padding: 100px 20px;
-    max-width: 900px;
+    padding: 10px 20px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
