@@ -19,6 +19,7 @@
 	    <script src="https://cdn.userway.org/widget.js" data-account="BCw7PWHG0g" data-position="3"></script>
     </head>
 
+    
     <body>
 
         <header>
@@ -143,7 +144,7 @@
                                 <h3>Live Video Production</h3>
                                 <p>
                                     <em>Petra Church</em><br>
-                                    Operate either three remote PTZ cameras or a video camerafor weekly live services, supporting consistent framing and reliable live video production.
+                                    Operate either three remote PTZ cameras or a video camera for weekly live services, supporting consistent framing and reliable live video production.
                                 </p>
                                 <button class="details-toggle">MORE DETAILS</button>
                             </div>
@@ -201,6 +202,29 @@
                                             <li>Signal flow</li>
                                             <li>Setup & troubleshooting</li>
                                         </ul>
+
+                                        
+
+                                        <!--Image Gallery-->
+                                        <div class="timeline-gallery">
+                                            <div class="gallery-item" onclick="openLightbox(this)">
+                                                <img src="/images/live-events/anastasia-music-2024.webp" alt="Anastasia Musical FOH">
+                                                <span class="gallery-caption">Anastasia - Spring Musical 2024</span>
+                                            </div>
+                                            <div class="gallery-item" onclick="openLightbox(this)">
+                                                <img src="/images/live-events/spring-concert-2024.webp" alt="Spring concert 2024 FOH">
+                                                <span class="gallery-caption">Spring Concert 2024</span>
+                                            </div>
+                                            <div class="gallery-item" onclick="openLightbox(this)">
+                                                <img src="/images/live-events/ruwa-2024-event.webp" alt="RUWA 2024 Arts Event">
+                                                <span class="gallery-caption">RUWA - Arts Event 2024</span>
+                                            </div>
+                                            <div class="gallery-item" onclick="openLightbox(this)">
+                                                <img src="/images/live-events/Christmas-concert-2023.webp" alt="Christmas concert 2023 FOH">
+                                                <span class="gallery-caption">Christmas Concert 2023</span>
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -282,6 +306,15 @@
                 <a href="https://www.flaticon.com/free-icons/system" target="_blank" title="system icons">System icons created by Design Circle - Flaticon</a>
             </div>
         </footer>
+
+        <!-- LIGHTBOX MODAL -->
+        <div id="lightbox-modal" class="lightbox">
+            <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+            <div class="lightbox-content">
+                <img id="lightbox-img" src="" alt="Expanded View">
+                <div id="lightbox-caption"></div>
+            </div>
+        </div>
         
         <script src="/javascript/mobile-menu.js"></script>
 
@@ -363,6 +396,40 @@
             window.addEventListener("scroll", revealOnScroll);
             revealOnScroll();
         </script>
+
+        <script>
+            function openLightbox(element) {
+                const modal = document.getElementById("lightbox-modal");
+                const lightboxImg = document.getElementById("lightbox-img");
+                const lightboxCaption = document.getElementById("lightbox-caption");
+
+                const img = element.querySelector("img");
+                const caption = element.querySelector(".gallery-caption");
+
+                lightboxImg.src = img.src;
+                lightboxCaption.textContent = caption ? caption.textContent : "";
+                modal.classList.add("active");
+            }
+
+            function closeLightbox() {
+                document.getElementById("lightbox-modal").classList.remove("active");
+            }
+
+            // Close lightbox on clicking outside the image or pressing ESC
+            document.getElementById("lightbox-modal").addEventListener("click", function(e) {
+                if (e.target === this) {
+                    closeLightbox();
+                }
+            });
+
+            document.addEventListener("keydown", function(e) {
+                if (e.key === "Escape") {
+                    closeLightbox();
+                }
+            });
+        </script>
+
+        
 
     </body>
 
